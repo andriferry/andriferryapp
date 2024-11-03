@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         pageTransition: { name: 'slide-fade', mode: 'out-in' },
     },
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss'],
+    modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@vueuse/nuxt'],
     css: ['~/assets/css/tailwind.css'],
     tailwindcss: {
         viewer: false,
