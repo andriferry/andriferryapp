@@ -7,7 +7,7 @@
     & li {
         > :focus,
         :hover {
-            @apply !bg-transparent;
+            @apply !bg-transparent text-primary;
         }
 
         & * {

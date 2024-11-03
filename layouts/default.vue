@@ -92,19 +92,39 @@ const socialMedia = ref([
         <slot />
 
         <div class="w-full px-4 py-10">
-            <div
-                class="container font-light text-xs mx-auto flex px-2 justify-between">
-                <p class="items-center">
-                    @ Copyright {{ new Date().getFullYear() }}
-                </p>
-                <div class="flex gap-4 justify-center items-center">
-                    <a
-                        v-for="(social, index) in socialMedia"
-                        :key="index"
-                        :href="social.url"
-                        target="_blank">
-                        <span :class="social.icon" class="w-5 h-5"></span>
-                    </a>
+            <div class="container flex flex-col gap-4 text-xs mx-auto px-2">
+                <div class="py-6 border-b flex justify-between">
+                    <NuxtLink
+                        to="/"
+                        class="btn !py-1 hover:bg-transparent !px-0 btn-ghost text-xl">
+                        Andri Ferry
+                    </NuxtLink>
+
+                    <ul class="menu menu-horizontal plain-underline gap-4 px-1">
+                        <li v-for="(route, index) in routes" :key="index">
+                            <NuxtLink
+                                active-class="text-primary"
+                                :to="route.link"
+                                class="">
+                                {{ route.route }}
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full pt-6 flex justify-between font-light">
+                    <p class="items-center">
+                        @ Copyright {{ new Date().getFullYear() }}
+                    </p>
+                    <div class="flex gap-4 justify-center items-center">
+                        <a
+                            v-for="(social, index) in socialMedia"
+                            :key="index"
+                            :href="social.url"
+                            target="_blank">
+                            <span :class="social.icon" class="w-5 h-5"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
