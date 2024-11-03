@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.menu.plain-underline {
+    & li {
+        > :focus,
+        :hover {
+            @apply !bg-transparent;
+        }
+
+        & * {
+            @apply font-medium  !py-2 px-1 rounded-none;
+        }
+    }
+}
+
+.menu.dropdown-content {
+    & li {
+        > :focus {
+            @apply bg-primary text-white;
+        }
+    }
+}

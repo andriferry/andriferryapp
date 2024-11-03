@@ -28,4 +28,9 @@ export default defineNuxtConfig({
     tailwindcss: {
         viewer: false,
     },
+    postcss: {
+        plugins: {
+            'tailwindcss/nesting': {},
+        },
+    },
 });
