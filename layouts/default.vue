@@ -32,8 +32,6 @@ const socialMedia = ref([
 ]);
 
 const el = ref<HTMLElement | null>(null);
-
-const { isScrolling } = useScroll(el);
 </script>
 
 <template>
