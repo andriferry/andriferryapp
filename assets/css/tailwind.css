@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+    @apply min-h-0;
+}
+
 .menu.plain-underline {
     & li {
         > :focus,
