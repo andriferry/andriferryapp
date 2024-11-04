@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { useScroll } from '@vueuse/core';
+import { useWindowScroll } from '@vueuse/core';
+
+const { y } = useWindowScroll({ behavior: 'smooth' });
+const config = useRuntimeConfig();
 
 const routes = ref([
     {
@@ -30,16 +33,19 @@ const socialMedia = ref([
         url: 'https://www.linkedin.com/in/andri-ferry/',
     },
 ]);
-const config = useRuntimeConfig();
 
-const el = ref<HTMLElement | null>(null);
+const scroller = computed(() => {
+    return y.value > 0 ? 'bg-white p-2' : 'p-7 bg-transparent';
+});
 </script>
 
 <template>
     <div class="min-h-screen flex flex-col justify-between">
         <header class="">
             <nav
-                class="p-7 bg-white w-full z-[1000] flex items-center justify-between fixed">
+                style="transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91)"
+                :class="scroller"
+                class="w-full z-[1000] flex items-center justify-between fixed">
                 <div class="container mx-auto">
                     <div class="navbar px-0">
                         <div class="navbar-start">
