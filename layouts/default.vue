@@ -43,9 +43,8 @@ const scroller = computed(() => {
     <div class="min-h-screen flex flex-col justify-between">
         <header class="">
             <nav
-                style="transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91)"
                 :class="scroller"
-                class="w-full z-[1000] flex items-center justify-between fixed">
+                class="w-full z-[1000] transition-all duration-200 ease-in-out flex items-center justify-between fixed">
                 <div class="container mx-auto">
                     <div class="navbar px-0">
                         <div class="navbar-start">

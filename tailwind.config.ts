@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import daisyUi from 'daisyui';
+import tailwindTypography from '@tailwindcss/typography';
 import { addDynamicIconSelectors } from '@iconify/tailwind';
 
 export default {
@@ -18,7 +19,7 @@ export default {
             monrepo: ['Manrope'],
         },
     },
-    plugins: [daisyUi, addDynamicIconSelectors()],
+    plugins: [daisyUi, tailwindTypography, addDynamicIconSelectors()],
     daisyui: {
         themes: [
             {

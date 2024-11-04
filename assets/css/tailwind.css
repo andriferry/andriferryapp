@@ -27,3 +27,16 @@
         }
     }
 }
+
+.name-title {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* color: red;
+    text-shadow: none !important;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg,#833ab4 0,#fd1d1d 50%,#c28632 100%) !important */
+}
