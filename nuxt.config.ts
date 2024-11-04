@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     app: {
         head: {
-            title: 'Andri Ferry',
+            title: process.env.NUXT_TITLE_APP,
             link: [
                 {
                     rel: 'preconnect',
@@ -22,6 +22,11 @@ export default defineNuxtConfig({
         },
         layoutTransition: { name: 'slide-fade', mode: 'out-in' },
         pageTransition: { name: 'slide-fade', mode: 'out-in' },
+    },
+    runtimeConfig: {
+        public: {
+            title: process.env.NUXT_TITLE_APP,
+        },
     },
     devtools: { enabled: true },
     modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@vueuse/nuxt'],

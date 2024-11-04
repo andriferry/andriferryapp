@@ -30,16 +30,18 @@ const socialMedia = ref([
         url: 'https://www.linkedin.com/in/andri-ferry/',
     },
 ]);
+const config = useRuntimeConfig();
 
 const el = ref<HTMLElement | null>(null);
 </script>
 
 <template>
-    <div>
-        <div class="min-h-screen flex flex-col justify-between" ref="el">
-            <div class="relative w-full">
-                <div class="container mx-auto bg-transparent relative z-50">
-                    <div class="navbar absolute bg-transparent mt-4">
+    <div class="min-h-screen flex flex-col justify-between">
+        <header class="">
+            <nav
+                class="p-7 bg-white w-full z-[1000] flex items-center justify-between fixed">
+                <div class="container mx-auto">
+                    <div class="navbar px-0">
                         <div class="navbar-start">
                             <div class="dropdown">
                                 <div
@@ -67,8 +69,8 @@ const el = ref<HTMLElement | null>(null);
                             <div class="flex items-center gap-5">
                                 <NuxtLink
                                     to="/"
-                                    class="btn !py-1 !px-3 btn-ghost text-2xl">
-                                    Andri Ferry
+                                    class="btn hover:bg-transparent !py-1 !px-3 btn-ghost text-2xl">
+                                    {{ config.public.title }}
                                 </NuxtLink>
 
                                 <div class="hidden lg:flex">
@@ -98,21 +100,23 @@ const el = ref<HTMLElement | null>(null);
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
+        </header>
 
-            <slot />
+        <slot />
 
-            <div class="w-full px-4 py-10">
-                <div class="container flex flex-col gap-4 text-xs mx-auto px-2">
+        <footer>
+            <div class="p-7 w-full flex items-center justify-between">
+                <div class="container mx-auto bg-white flex flex-col">
                     <div class="py-6 border-b flex justify-between">
                         <NuxtLink
                             to="/"
                             class="btn !py-1 hover:bg-transparent !px-0 btn-ghost text-xl">
-                            Andri Ferry
+                            {{ config.public.title }}
                         </NuxtLink>
 
                         <ul
-                            class="menu menu-horizontal plain-underline gap-4 px-1">
+                            class="menu menu-horizontal plain-underline gap-4 px-0">
                             <li v-for="(route, index) in routes" :key="index">
                                 <NuxtLink
                                     active-class="text-primary"
@@ -124,10 +128,11 @@ const el = ref<HTMLElement | null>(null);
                         </ul>
                     </div>
 
-                    <div class="w-full pt-6 flex justify-between font-light">
-                        <p class="items-center">
+                    <div class="flex w-full pt-6 justify-between">
+                        <p class="items-center font-light text-sm text-center">
                             @ Copyright {{ new Date().getFullYear() }}
                         </p>
+
                         <div class="flex gap-4 justify-center items-center">
                             <a
                                 v-for="(social, index) in socialMedia"
@@ -142,7 +147,7 @@ const el = ref<HTMLElement | null>(null);
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 </template>
 

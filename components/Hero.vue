@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="h-screen relative z-0 overflow-hidden">
+    <!-- <div class="h-screen relative z-0 overflow-hidden">
         <div class="relative w-full h-full">
             <div
                 class="bg-[#B9FFE2] absolute -top-[160px] -left-[250px] h-[686px] w-[686px] blur-[234px] opacity-50 rounded-full"></div>
@@ -12,7 +12,9 @@
             <div
                 class="bg-[#FFFBDA] absolute -top-[350px] right-[250px] h-[686px] w-[686px] blur-[100px] rounded-full"></div>
         </div>
-    </div>
+
+        <div class="bg-red-500">Hello</div>
+    </div> -->
 </template>
 
 <style scoped></style>
