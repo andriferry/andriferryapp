@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="w-full h-full absolute bottom-0">
+    <div class="w-full h-full absolute bottom-0 overflow-hidden">
         <div
             class="bg-[#B9FFE2] absolute -top-[160px] -left-[250px] h-[686px] w-[686px] blur-[234px] opacity-50 rounded-full"></div>
         <div

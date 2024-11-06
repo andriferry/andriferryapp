@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import daisyUi from 'daisyui';
 import tailwindTypography from '@tailwindcss/typography';
 import { addDynamicIconSelectors } from '@iconify/tailwind';
+import colors from 'tailwindcss/colors';
 
 export default {
     content: [
@@ -25,7 +26,15 @@ export default {
             {
                 light: {
                     ...require('daisyui/src/theming/themes')['light'],
-                    primary: '#22C55E',
+                    primary: colors.pink[500],
+                    secondary: colors.violet[500],
+                    accent: colors.slate[500],
+                    neutral: colors.gray[50],
+                    info: colors.slate[600],
+                    // success: '#00ff00',
+                    'info-content':colors.slate[400],
+                    warning: colors.orange[400],
+                    // error: '#ff0000',
                 },
             },
         ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]

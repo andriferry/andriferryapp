@@ -5,10 +5,10 @@ const { y } = useWindowScroll({ behavior: 'smooth' });
 const config = useRuntimeConfig();
 
 const routes = ref([
-    // {
-    //     route: 'Home',
-    //     link: '/',
-    // },
+    {
+        route: 'Home',
+        link: '/',
+    },
     {
         route: 'Project',
         link: '/project',
@@ -44,7 +44,7 @@ const scroller = computed(() => {
         <header class="">
             <nav
                 :class="scroller"
-                class="w-full z-[1000] transition-all duration-200 ease-in-out flex items-center justify-between fixed">
+                class="w-full z-[500] transition-all duration-200 ease-in-out flex items-center justify-between fixed">
                 <div class="container mx-auto">
                     <div class="navbar px-0">
                         <div class="navbar-start">
@@ -71,7 +71,7 @@ const scroller = computed(() => {
                                 </ul>
                             </div>
 
-                            <div class="flex items-center gap-5">
+                            <div class="flex text-info items-center gap-5">
                                 <NuxtLink
                                     to="/"
                                     class="btn hover:bg-transparent !py-1 !px-3 btn-ghost text-2xl">
@@ -85,7 +85,7 @@ const scroller = computed(() => {
                                             v-for="(route, index) in routes"
                                             :key="index">
                                             <NuxtLink
-                                                active-class="border-b-primary border-b-2"
+                                                active-class=" text-primary "
                                                 :to="route.link"
                                                 class="text-base">
                                                 {{ route.route }}
@@ -97,7 +97,8 @@ const scroller = computed(() => {
                         </div>
 
                         <div class="navbar-end">
-                            <button class="btn btn-sm btn-primary text-white">
+                            <button
+                                class="btn btn-sm btn-primary hover:btn-info hover:text-white text-white">
                                 Contact
                                 <span
                                     class="icon-[majesticons--open] h-4 w-4"></span>
@@ -107,7 +108,7 @@ const scroller = computed(() => {
                 </div>
             </nav>
         </header>
-
+        <Gradient />
         <div>
             <slot />
         </div>
@@ -115,7 +116,7 @@ const scroller = computed(() => {
         <footer>
             <div class="p-7 w-full flex items-center justify-between">
                 <div class="container mx-auto bg-white flex flex-col">
-                    <div class="py-6 border-b flex justify-between">
+                    <div class="py-6 text-info border-b flex justify-between">
                         <NuxtLink
                             to="/"
                             class="btn !py-1 hover:bg-transparent !px-0 btn-ghost text-xl">
@@ -136,7 +137,8 @@ const scroller = computed(() => {
                     </div>
 
                     <div class="flex w-full pt-6 justify-between">
-                        <p class="items-center font-light text-sm text-center">
+                        <p
+                            class="items-center text-accent font-light text-sm text-center">
                             @ Copyright {{ new Date().getFullYear() }}
                         </p>
 
@@ -148,7 +150,7 @@ const scroller = computed(() => {
                                 target="_blank">
                                 <span
                                     :class="social.icon"
-                                    class="w-5 h-5"></span>
+                                    class="w-5 h-5 text-accent hover:text-primary transition-all duration-150 ease-out"></span>
                             </a>
                         </div>
                     </div>
