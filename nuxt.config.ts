@@ -20,7 +20,7 @@ export default defineNuxtConfig({
                 },
             ],
         },
-        layoutTransition: { name: 'slide-fade', mode: 'out-in' },
+        // layoutTransition: { name: 'slide-fade', mode: 'out-in' },
         pageTransition: { name: 'slide-fade', mode: 'out-in' },
     },
     runtimeConfig: {

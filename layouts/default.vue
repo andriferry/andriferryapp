@@ -5,10 +5,10 @@ const { y } = useWindowScroll({ behavior: 'smooth' });
 const config = useRuntimeConfig();
 
 const routes = ref([
-    {
-        route: 'Home',
-        link: '/',
-    },
+    // {
+    //     route: 'Home',
+    //     link: '/',
+    // },
     {
         route: 'Project',
         link: '/project',
@@ -108,7 +108,9 @@ const scroller = computed(() => {
             </nav>
         </header>
 
-        <slot />
+        <div>
+            <slot />
+        </div>
 
         <footer>
             <div class="p-7 w-full flex items-center justify-between">

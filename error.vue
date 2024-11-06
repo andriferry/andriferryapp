@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app';
 
-definePageMeta({
-    layout: '404',
-});
+// definePageMeta({
+//     layout: '404',
+// });
 
 defineProps({
     error: Object as () => NuxtError,

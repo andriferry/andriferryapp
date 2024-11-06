@@ -1,17 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+///Interval function
+// myInterval = setInterval(setColor, 8000);
+
+// function setColor() {
+//   let x = document.body;
+//   x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+// }
+
+// function stopColor() {
+//   clearInterval(myInterval);
+// }
+</script>
 
 <template>
-    <Hero />
-
-    <div class="card bg-neutral text-neutral-content w-[400px]">
-        <div class="card-body items-center text-center">
-            <h2 class="card-title">Cookies!</h2>
-            <p>We are using cookies for no reason.</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary">Accept</button>
-                <button class="btn btn-ghost">Deny</button>
-            </div>
-        </div>
+    <div>
+        <!-- <Hero /> -->
+         This is Index Project
     </div>
 
     <!-- <div class="flex h-screen w-full items-center justify-center">
