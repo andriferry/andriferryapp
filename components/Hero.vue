@@ -22,16 +22,16 @@ const testimonial = ref([
 </script>
 
 <template>
-    <section class="pt-36 min-h-screen overflow-hidden relative pb-0">
+    <section class="pt-16 lg:pt-36 min-h-screen overflow-hidden relative pb-0">
         <div
             class="container py-5 flex justify-center items-center relative z-10 mx-auto h-screen">
             <div class="grid w-full h-full lg:grid-cols-2">
                 <ClientOnly>
                     <div
-                        class="flex flex-col gap-4 justify-center items-start"
+                        class="flex flex-col gap-4 justify-center items-start px-6 md:px-0"
                         data-aos="fade-up">
                         <h1
-                            class="tracking-wide text-info leading-tight font-monrepo text-[4rem] font-extrabold capitalize">
+                            class="tracking-wide text-info leading-tight font-monrepo text-5xl lg:text-[4rem] font-extrabold capitalize">
                             <span class="icon-[noto--waving-hand]"></span> Hey
                             there,
                             <br />
@@ -47,7 +47,8 @@ const testimonial = ref([
                             </span>
                         </h1>
 
-                        <article class="prose w-3/4 text-accent font-medium">
+                        <article
+                            class="prose text-sm md:text-xl w-3/4 text-accent font-medium">
                             <p>
                                 Highly skilled Vuejs developer with 5 years of
                                 experience in frontend development.

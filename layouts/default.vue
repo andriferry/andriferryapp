@@ -35,7 +35,7 @@ const socialMedia = ref([
 ]);
 
 const scroller = computed(() => {
-    return y.value > 0 ? 'bg-white p-2' : 'p-7 bg-transparent';
+    return y.value > 0 ? 'bg-white p-2' : 'p-4 md:p-7 bg-transparent';
 });
 </script>
 
@@ -46,7 +46,7 @@ const scroller = computed(() => {
                 :class="scroller"
                 class="w-full z-[500] transition-all duration-200 ease-in-out flex items-center justify-between fixed">
                 <div class="container mx-auto">
-                    <div class="navbar px-0">
+                    <div class="navbar px-0 py-0">
                         <div class="navbar-start">
                             <div class="dropdown">
                                 <div
