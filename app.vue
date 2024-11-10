@@ -11,14 +11,12 @@ nuxtApp.hook('page:finish', () => {
 
 <template>
     <div :class="{ 'h-screen overflow-hidden': loading }">
-        <Transition name="slide-fade" mode="out-in">
-            <div
-                v-if="loading"
-                class="fixed h-screen transition duration-300 ease-in-out flex justify-center items-center top-0 w-full z-[1000] bg-neutral">
-                <span
-                    class="loading loading-infinity bg-gradient-to-r from-primary to-secondary w-52 h-52"></span>
-            </div>
-        </Transition>
+        <div
+            v-if="loading"
+            class="fixed h-screen transition duration-300 ease-in-out flex justify-center items-center top-0 w-full z-[1000] bg-neutral">
+            <span
+                class="loading loading-infinity bg-gradient-to-r from-primary to-secondary w-52 h-52"></span>
+        </div>
 
         <NuxtLoadingIndicator />
         <NuxtLayout class="font-inter">

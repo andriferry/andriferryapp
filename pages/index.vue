@@ -1,19 +1,21 @@
 <script setup lang="ts"></script>
 
 <template>
-    <Hero />
+    <div>
+        <Hero />
 
-    <div>Latest Project</div>
+        <div>Latest Project</div>
 
-    <div>Service</div>
+        <div>Service</div>
 
-    <div>Testimonial</div>
+        <div>Testimonial</div>
 
-    <div>Resume / About me</div>
+        <div>Resume / About me</div>
 
-    <div>Contact me</div>
+        <div>Contact me</div>
 
-    <div>Blog</div>
+        <div>Blog</div>
+    </div>
 </template>
 
 <style scoped></style>
