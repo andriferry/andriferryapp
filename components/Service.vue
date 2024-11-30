@@ -1,9 +1,43 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const allServices = ref([
+    {
+        label: 'Website Design',
+        icon: 'icon-[fluent--design-ideas-24-filled]',
+        textItalic: 'Bring Your Ideas to Life',
+        paragraph: [
+            'Transform your vision into a captivating digital presence with my experience web design services.',
+            `Whether you're starting from scratch or looking to refresh your current website.`,
+            'A design that is not only visually appealing but also functional and user friendly.',
+        ],
+    },
+    {
+        label: 'Software Development',
+        icon: 'icon-[solar--code-broken]',
+        textItalic: "Let's Build Something Great",
+        paragraph: [
+            'Your business with custom software solutions tailored to meet your unique needs. With a focus on innovation and reliability.',
+            'Deliver software that enhances your operations, boosts efficiency, and drives growth.',
+            'Ready to start ?',
+        ],
+    },
+    {
+        label: 'Experience Peace of Mind',
+        icon: 'icon-[mdi--hours-24]',
+        textItalic: `He literally responds whether it's 12 AM or 12 PM" --Upwork client--`,
+        paragraph: [
+            "When you work with me, you're choosing a partner you can trust to handle your project with care and diligence.",
+            "Whether it's web development, software solutions, or any other service, reliability is at the core of my work ethic.",
+            'Ready to experience reliable service ?',
+        ],
+    },
+]);
+</script>
 
 <template>
-    <div class="h-screen overflow-hidden relative">
-        <div class="container grid gap-4 lg:grid-cols-2 mx-auto px-6 md:px-0 py-10">
-            <article class="prose" data-aos="fade-up">
+    <div class="min-h-screen overflow-hidden relative">
+        <div
+            class="container grid gap-4 lg:grid-cols-2 mx-auto px-6 md:px-0 py-10">
+            <article class="prose" data-aos="fade-right">
                 <h1 class="text-info text-3xl lg:text-4xl">
                     The ways I can help you
                 </h1>
@@ -26,12 +60,56 @@
                     It can be especially frustrating when you know exactly what
                     you want, but know that it's holding back your growth. It's
                     a pretty common theme I see among founders I've worked with.
-                    I take all of that off your shoulders and get the job done
                 </p>
             </article>
 
             <div class="flex justify-center items-center">
-                <img data-aos="fade-up" src="~/assets/image/stats.png" alt="" class="pb-2">
+                <img
+                    data-aos="fade-left"
+                    src="~/assets/image/stats.png"
+                    alt=""
+                    class="pb-2" />
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 md:px-0 py-10">
+            <article data-aos="fade-down" class="prose mb-3">
+                <h1 class="text-info text-3xl lg:text-4xl">
+                    "I take all of that off your shoulders and get the job done
+                </h1>
+            </article>
+
+            <div data-aos="fade-up" class="grid lg:grid-cols-3 gap-4">
+                <div
+                    v-for="(data, index) in allServices"
+                    :key="index"
+                    class="card bg-white cursor-pointer group hover:bg-primary transition duration-300 ease-in-out hover:scale-95 shadow-xl text-primary-content">
+                    <div class="card-body">
+                        <div
+                            class="card-title flex gap-3 justify-start items-center group-hover:text-white text-accent">
+                            <div class="avatar">
+                                <div
+                                    class="w-12 !flex justify-center items-center ease-in-out transition-all duration-300 group-hover:bg-white bg-primary rounded-xl">
+                                    <span
+                                        :class="data.icon"
+                                        class="text-3xl group-hover:text-primary ease-in-out transition-all duration-300 text-white"></span>
+                                </div>
+                            </div>
+                            {{ data.label }}
+                        </div>
+
+                        <article
+                            class="prose group-hover:text-white text-accent text-sm mt-3">
+                            <p class="italic">"{{ data.textItalic }}"</p>
+
+                            <p
+                                v-for="(paragraph, indexP) in data.paragraph"
+                                :key="indexP">
+                                {{ paragraph }}
+                            </p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

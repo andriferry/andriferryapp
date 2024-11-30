@@ -7,7 +7,7 @@
         <!-- <AboutMe /> -->
         <Service />
 
-        <div>Latest Project</div>
+        <!-- <div>Latest Project</div>
 
         <div>Service</div>
 
@@ -17,7 +17,7 @@
 
         <div>Contact me</div>
 
-        <div>Blog</div>
+        <div>Blog</div> -->
     </div>
 </template>
 
