@@ -34,9 +34,8 @@ const allServices = ref([
 </script>
 
 <template>
-    <div class="min-h-screen overflow-hidden relative">
-        <div
-            class="container grid gap-4 lg:grid-cols-2 mx-auto px-6 md:px-0 py-10">
+    <Wrapper>
+        <Container class="grid gap-4 lg:grid-cols-2">
             <article class="prose" data-aos="fade-right">
                 <h1 class="text-info text-3xl lg:text-4xl">
                     The ways I can help you
@@ -70,9 +69,9 @@ const allServices = ref([
                     alt=""
                     class="pb-2" />
             </div>
-        </div>
+        </Container>
 
-        <div class="container mx-auto px-6 md:px-0 py-10">
+        <Container class="relative">
             <article data-aos="fade-down" class="prose mb-3">
                 <h1 class="text-info text-3xl lg:text-4xl">
                     "I take all of that off your shoulders and get the job done
@@ -111,8 +110,8 @@ const allServices = ref([
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </Container>
+    </Wrapper>
 </template>
 
 <style scoped></style>

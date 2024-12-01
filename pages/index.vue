@@ -4,8 +4,9 @@
     <div>
         <Hero />
 
-        <!-- <AboutMe /> -->
         <Service />
+
+        <LatestProject />
 
         <!-- <div>Latest Project</div>
 

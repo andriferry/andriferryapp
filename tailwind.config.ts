@@ -35,6 +35,8 @@ export default {
                     'info-content':colors.slate[400],
                     warning: colors.orange[400],
                     // error: '#ff0000',
+                    // greenSmooth: '#B9FFE2'
+                    // 'bermuda': '#78dcca',
                 },
             },
         ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
