@@ -11,11 +11,11 @@
         </Container>
 
         <Container class="pt-0">
-            <div class="">
-                <!-- bg-[#ddedff] -->
+            <div class="" data-aos="fade-down">
                 <div class="card bg-[#ddedff] shadow-lg min-h-96">
-                    <div class="card-body items-center justify-center lg:px-16">
-                        <div class="grid gap-5 lg:grid-cols-2 w-full">
+                    <div
+                        class="card-body items-center justify-center relative overflow-hidden lg:px-16">
+                        <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
                             <div
                                 class="flex justify-center lg:justify-start items-center">
                                 <article
@@ -34,11 +34,17 @@
                                 </article>
                             </div>
 
-                            <div class="flex items-center">
+                            <div class="flex items-center relative">
                                 <img
-                                    class="rounded-2xl shadow-2xl"
+                                    class="rounded-2xl z-10 relative shadow-2xl"
                                     src="~assets/image/urlMonitor.png"
                                     alt="" />
+
+                                <div
+                                    class="bg-cyan-900/25 z-0 -top-7 -left-8 h-40 w-40 rounded-full absolute"></div>
+
+                                <div
+                                    class="bg-cyan-900/25 z-0 -bottom-[1.5rem] -right-8 h-40 w-40 rounded-full absolute"></div>
                             </div>
                         </div>
                     </div>
