@@ -99,12 +99,12 @@ const myTools = shallowRef([
     },
 ]);
 
-const getAge = () => {
+const experienceAge = computed(() => {
     let birthday = new Date('2019-05-01');
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
-};
+});
 </script>
 
 <template>
@@ -119,12 +119,14 @@ const getAge = () => {
                     <span class="icon-[twemoji--waving-hand]"></span>
                 </h1>
 
-                <div class="avatar">
-                    <div
-                        class="w-20 ring-gray-300 shadow-xl ring-offset-white ring ring-offset-1 rounded-full">
-                        <img src="~assets/image/profile.jpg" />
+                <ClientOnly>
+                    <div class="avatar">
+                        <div
+                            class="w-20 ring-gray-300 shadow-xl ring-offset-white ring ring-offset-1 rounded-full">
+                            <img src="~assets/image/profile.jpg" />
+                        </div>
                     </div>
-                </div>
+                </ClientOnly>
 
                 <p class="text-accent mt-0">
                     I'm Andri Ferry, I work as a remote worker, software
@@ -148,6 +150,8 @@ const getAge = () => {
                             v-for="(data, index) in iconsComponent"
                             :key="index"
                             class="tooltip tooltip-primary"
+                            data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
                             :data-tip="data.text">
                             <component
                                 :is="data.component"
@@ -169,21 +173,62 @@ const getAge = () => {
                             v-for="(data, index) in myTools"
                             :key="index"
                             class="tooltip tooltip-primary"
-                            :data-tip="data.text">
+                            :data-tip="data.text"
+                            data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic">
                             <component
                                 :is="data.component"
                                 class="w-16 h-16 rounded-2xl hover:shadow-2xl shadow-xl cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out" />
                         </div>
                     </div>
+
+                    <div
+                        class="grid sm:grid-cols-3 py-4 mt-10 py border-b border-slate-100">
+                        <div
+                            class="flex items-center justify-center gap-3"
+                            data-aos="fade-down">
+                            <ClientOnly>
+                                <AnimatedCounter
+                                    :value="experienceAge"
+                                    :duration="1000"
+                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
+                            </ClientOnly>
+
+                            <p class="font-semibold m-0">
+                                + years of Experience
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-center gap-3"
+                            data-aos="fade-down">
+                            <ClientOnly>
+                                <AnimatedCounter
+                                    :value="90"
+                                    :duration="1000"
+                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
+                            </ClientOnly>
+                            <p class="font-semibold m-0">
+                                % of Works Completed
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-center gap-3"
+                            data-aos="fade-down">
+                            <ClientOnly>
+                                <AnimatedCounter
+                                    :value="100"
+                                    :duration="1000"
+                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
+                            </ClientOnly>
+                            <p class="font-semibold text-sm m-0">
+                                % Job Success Score
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </article>
-
-            <!-- <ClientOnly>
-                <AnimatedCounter
-                    :value="500"
-                    :duration="1000"
-                    class="counter" />
-            </ClientOnly> -->
         </Container>
     </Wrapper>
 </template>
