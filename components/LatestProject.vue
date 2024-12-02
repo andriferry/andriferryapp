@@ -15,8 +15,9 @@
 
         <Container class="pt-0">
             <div class="grid gap-10">
+                <!-- First Project bg-[#ddedff] bg-[#a579f5]  AA7CFF -->
                 <div class="col-span-1">
-                    <div class="card bg-[#ddedff] shadow-lg min-h-96">
+                    <div class="card bg-[#a87df8] shadow-lg min-h-96">
                         <div
                             class="card-body items-center justify-center relative overflow-hidden lg:px-16">
                             <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
@@ -26,16 +27,16 @@
                                     <article
                                         class="prose text-center justify-center lg:text-start text-accent">
                                         <h1
-                                            class="text-info mb-0 text-4xl lg:text-5xl">
+                                            class="text-[#532a9f] mb-0 text-4xl lg:text-5xl">
                                             URL Monitor
                                         </h1>
 
-                                        <p class="mt-0">
+                                        <p class="mt-0 text-[#6431c5]">
                                             Software Apps Project
                                         </p>
 
                                         <button
-                                            class="btn btn-wide lg:w-auto bg-info hover:bg-accent text-white border-none">
+                                            class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
                                             Case Study
                                         </button>
                                     </article>
@@ -64,9 +65,8 @@
                     </div>
                 </div>
 
-                <div class="col-span-1 grid grid-cols-12">
-                    <div
-                        class="card col-span-12 bg-[#ddedff] shadow-lg min-h-96">
+                <div class="col-span-1">
+                    <div class="card bg-[#4ADE80] shadow-lg min-h-96">
                         <div
                             class="card-body items-center justify-center relative overflow-hidden lg:px-16">
                             <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
@@ -76,16 +76,16 @@
                                     <article
                                         class="prose text-center justify-center lg:text-start text-accent">
                                         <h1
-                                            class="text-info mb-0 text-4xl lg:text-5xl">
-                                            URL Monitor
+                                            class="text-[#166534] mb-0 text-4xl lg:text-5xl">
+                                            Tomdash v 1.0
                                         </h1>
 
-                                        <p class="mt-0">
-                                            Software Apps Project
+                                        <p class="mt-0 text-[#166534]">
+                                            Multi-Purpose Dashboard UI
                                         </p>
 
                                         <button
-                                            class="btn btn-wide lg:w-auto bg-info hover:bg-accent text-white border-none">
+                                            class="btn btn-wide lg:w-auto bg-[#166534] hover:bg-[#166534]/60 text-white border-none">
                                             Case Study
                                         </button>
                                     </article>
@@ -95,7 +95,7 @@
                                     <img
                                         data-aos="zoom-out"
                                         class="rounded-2xl z-10 relative shadow-2xl"
-                                        src="~assets/image/urlMonitor.png"
+                                        src="~assets/image/dashboardConcept.png"
                                         alt="" />
 
                                     <div
@@ -111,21 +111,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card bg-base-100 image-full w-96 shadow-xl">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -133,4 +118,8 @@
     </Wrapper>
 </template>
 
-<style scoped></style>
+<style>
+.card.image-full::before {
+    @apply bg-primary;
+}
+</style>
