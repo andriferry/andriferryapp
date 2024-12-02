@@ -75,10 +75,16 @@
                                     class="flex justify-center lg:justify-start items-center">
                                     <article
                                         class="prose text-center justify-center lg:text-start text-accent">
-                                        <h1
-                                            class="text-[#166534] mb-0 text-4xl lg:text-5xl">
-                                            Tomdash v 1.0
-                                        </h1>
+                                        <div class="indicator">
+                                            <span
+                                                class="indicator-item text-white font-semibold badge bg-[#166534] translate-x-10 border-none">
+                                                v1.0
+                                            </span>
+                                            <h1
+                                                class="text-[#166534] mb-0 text-4xl lg:text-5xl">
+                                                Tomdash
+                                            </h1>
+                                        </div>
 
                                         <p class="mt-0 text-[#166534]">
                                             Multi-Purpose Dashboard UI

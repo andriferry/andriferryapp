@@ -2,7 +2,7 @@
 const allServices = ref([
     {
         label: 'Website Design',
-        icon: 'icon-[fluent--design-ideas-24-filled]',
+        icon: 'fluent--design-ideas-24-filled',
         textItalic: 'Bring Your Ideas to Life',
         paragraph: [
             'Transform your vision into a captivating digital presence with my experience web design services.',
@@ -12,7 +12,7 @@ const allServices = ref([
     },
     {
         label: 'Software Development',
-        icon: 'icon-[solar--code-broken]',
+        icon: 'solar--code-broken',
         textItalic: "Let's Build Something Great",
         paragraph: [
             'Your business with custom software solutions tailored to meet your unique needs. With a focus on innovation and reliability.',
@@ -22,7 +22,7 @@ const allServices = ref([
     },
     {
         label: 'Experience Peace of Mind',
-        icon: 'icon-[mdi--hours-24]',
+        icon: 'mdi--hours-24',
         textItalic: `He literally responds whether it's 12 AM or 12 PM" --Upwork client--`,
         paragraph: [
             "When you work with me, you're choosing a partner you can trust to handle your project with care and diligence.",
@@ -89,9 +89,9 @@ const allServices = ref([
                             <div class="avatar">
                                 <div
                                     class="w-12 !flex justify-center items-center ease-in-out transition-all duration-300 group-hover:bg-white bg-primary rounded-xl">
-                                    <span
-                                        :class="data.icon"
-                                        class="text-3xl group-hover:text-primary ease-in-out transition-all duration-300 text-white"></span>
+                                    <Icon
+                                        :icon="data.icon"
+                                        class="text-3xl group-hover:text-primary ease-in-out transition-all duration-300 text-white"></Icon>
                                 </div>
                             </div>
                             {{ data.label }}

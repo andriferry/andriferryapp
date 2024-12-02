@@ -21,15 +21,15 @@ const routes = ref([
 
 const socialMedia = ref([
     {
-        icon: 'icon-[bi--twitter-x]',
+        icon: 'bi--twitter-x',
         url: 'https://x.com/AndriFerry99379',
     },
     {
-        icon: 'icon-[cib--upwork]',
+        icon: 'cib--upwork',
         url: 'https://www.upwork.com/freelancers/andriferry',
     },
     {
-        icon: 'icon-[mdi--linkedin]',
+        icon: 'mdi--linkedin',
         url: 'https://www.linkedin.com/in/andri-ferry/',
     },
 ]);
@@ -53,8 +53,9 @@ const scroller = computed(() => {
                                     tabindex="0"
                                     role="button"
                                     class="btn btn-ghost btn-sm btn-circle lg:hidden">
-                                    <span
-                                        class="icon-[heroicons-outline--menu-alt-1] h-5 w-5" />
+                                    <Icon
+                                        icon="heroicons-outline--menu-alt-1"
+                                        class="h-5 w-5" />
                                 </div>
                                 <ul
                                     tabindex="0"
@@ -100,8 +101,10 @@ const scroller = computed(() => {
                             <button
                                 class="btn btn-sm btn-primary hover:btn-info hover:text-white text-white">
                                 Contact
-                                <span
-                                    class="icon-[majesticons--open] h-4 w-4"></span>
+
+                                <Icon
+                                    icon="majesticons--open"
+                                    class="h-4 w-4" />
                             </button>
                         </div>
                     </div>
@@ -148,9 +151,9 @@ const scroller = computed(() => {
                                 :key="index"
                                 :href="social.url"
                                 target="_blank">
-                                <span
-                                    :class="social.icon"
-                                    class="w-5 h-5 text-accent hover:text-primary transition-all duration-150 ease-out"></span>
+                                <Icon
+                                    :icon="social.icon"
+                                    class="w-5 h-5 text-accent hover:text-primary transition-all duration-150 ease-out"></Icon>
                             </a>
                         </div>
                     </div>

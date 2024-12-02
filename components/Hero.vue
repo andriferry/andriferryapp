@@ -32,8 +32,8 @@ const testimonial = ref([
                         data-aos="fade-up">
                         <h1
                             class="tracking-wide text-info leading-tight font-monrepo text-5xl lg:text-[4rem] font-extrabold capitalize">
-                            <span class="icon-[noto--waving-hand]"></span> Hey
-                            there,
+                            <Icon icon="twemoji--waving-hand"></Icon>
+                            Hey there,
                             <br />
                             it's
 

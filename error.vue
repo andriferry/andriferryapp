@@ -18,7 +18,7 @@ defineProps({
             class="container gap-10 flex flex-col justify-center items-center relative z-10 mx-auto h-screen">
             <div
                 class="flex text-9xl gap-3 font-bold text-slate-600 items-center justify-center">
-                <span class="icon-[noto--sad-but-relieved-face]"></span>
+                <Icon icon="noto--sad-but-relieved-face"></Icon>
                 <h1 class="">{{ error?.statusCode }}</h1>
             </div>
 
