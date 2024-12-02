@@ -183,48 +183,59 @@ const experienceAge = computed(() => {
                     </div>
 
                     <div
-                        class="grid sm:grid-cols-3 py-4 mt-10 py border-b border-slate-100">
-                        <div
-                            class="flex items-center justify-center gap-3"
-                            data-aos="fade-down">
-                            <ClientOnly>
-                                <AnimatedCounter
-                                    :value="experienceAge"
-                                    :duration="1000"
-                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
-                            </ClientOnly>
+                        class="grid grid-cols-2 sm:grid-cols-3 py-4 mt-10 border-b border-slate-100">
+                        <div class="flex justify-center items-center">
+                            <div class="stats">
+                                <div class="stat px-0">
+                                    <ClientOnly>
+                                        <AnimatedCounter
+                                            :value="experienceAge"
+                                            :duration="1000"
+                                            class="mb-0 stat-value plus text-5xl font-[800] text-h1 text-primary" />
+                                    </ClientOnly>
 
-                            <p class="font-semibold m-0">
-                                + years of Experience
-                            </p>
+                                    <div
+                                        class="stat-desc font-semibold text-sm">
+                                        years of Experience
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div
-                            class="flex items-center justify-center gap-3"
-                            data-aos="fade-down">
-                            <ClientOnly>
-                                <AnimatedCounter
-                                    :value="90"
-                                    :duration="1000"
-                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
-                            </ClientOnly>
-                            <p class="font-semibold m-0">
-                                % of Works Completed
-                            </p>
+                        <div class="flex justify-center items-center">
+                            <div class="stats">
+                                <div class="stat px-0">
+                                    <ClientOnly>
+                                        <AnimatedCounter
+                                            :value="90"
+                                            :duration="1000"
+                                            class="mb-0 stat-value percentage text-5xl font-[800] text-h1 text-primary" />
+                                    </ClientOnly>
+
+                                    <div
+                                        class="stat-desc font-semibold text-sm">
+                                        of Works Completed
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div
-                            class="flex items-center justify-center gap-3"
-                            data-aos="fade-down">
-                            <ClientOnly>
-                                <AnimatedCounter
-                                    :value="100"
-                                    :duration="1000"
-                                    class="mb-0 text-6xl font-[800] text-h1 text-primary" />
-                            </ClientOnly>
-                            <p class="font-semibold text-sm m-0">
-                                % Job Success Score
-                            </p>
+                        <div class="flex justify-center items-center">
+                            <div class="stats">
+                                <div class="stat px-0">
+                                    <ClientOnly>
+                                        <AnimatedCounter
+                                            :value="100"
+                                            :duration="1000"
+                                            class="mb-0 stat-value percentage text-5xl font-[800] text-h1 text-primary" />
+                                    </ClientOnly>
+
+                                    <div
+                                        class="stat-desc font-semibold text-sm">
+                                        Job Success Score
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,4 +244,12 @@ const experienceAge = computed(() => {
     </Wrapper>
 </template>
 
-<style scoped></style>
+<style>
+.percentage::after {
+    content: ' %';
+}
+
+.plus::after {
+    content: ' +';
+}
+</style>
