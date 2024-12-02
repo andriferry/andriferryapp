@@ -19,6 +19,7 @@
     "nuxt": "^3.13.2",
     "nuxt-aos": "^1.2.5",
     "vue": "latest",
+    "vue-animated-counter": "^0.3.0",
     "vue-router": "latest"
   },
   "devDependencies": {

@@ -33,7 +33,7 @@ const iconsComponent = shallowRef([
         component: Html,
     },
     {
-        text: 'Css',
+        text: 'CSS',
         component: Css,
     },
 
@@ -98,6 +98,13 @@ const myTools = shallowRef([
         component: Slack,
     },
 ]);
+
+const getAge = () => {
+    let birthday = new Date('2019-05-01');
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+};
 </script>
 
 <template>
@@ -113,7 +120,8 @@ const myTools = shallowRef([
                 </h1>
 
                 <div class="avatar">
-                    <div class="w-20 ring-gray-300 shadow-xl ring-offset-white ring ring-offset-1 rounded-full">
+                    <div
+                        class="w-20 ring-gray-300 shadow-xl ring-offset-white ring ring-offset-1 rounded-full">
                         <img src="~assets/image/profile.jpg" />
                     </div>
                 </div>
@@ -169,6 +177,13 @@ const myTools = shallowRef([
                     </div>
                 </div>
             </article>
+
+            <!-- <ClientOnly>
+                <AnimatedCounter
+                    :value="500"
+                    :duration="1000"
+                    class="counter" />
+            </ClientOnly> -->
         </Container>
     </Wrapper>
 </template>
