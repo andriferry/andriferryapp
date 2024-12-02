@@ -2,33 +2,36 @@
 const allServices = ref([
     {
         label: 'Website Design',
-        icon: 'fluent--design-ideas-24-filled',
+        icon: 'icon-[fluent--design-ideas-24-filled]',
         textItalic: 'Bring Your Ideas to Life',
         paragraph: [
             'Transform your vision into a captivating digital presence with my experience web design services.',
             `Whether you're starting from scratch or looking to refresh your current website.`,
             'A design that is not only visually appealing but also functional and user friendly.',
         ],
+        oas: 'fade-right',
     },
     {
         label: 'Software Development',
-        icon: 'solar--code-broken',
+        icon: 'icon-[solar--code-broken]',
         textItalic: "Let's Build Something Great",
         paragraph: [
             'Your business with custom software solutions tailored to meet your unique needs. With a focus on innovation and reliability.',
             'Deliver software that enhances your operations, boosts efficiency, and drives growth.',
             'Ready to start ?',
         ],
+        oas: 'fade-up',
     },
     {
         label: 'Experience Peace of Mind',
-        icon: 'mdi--hours-24',
+        icon: 'icon-[mdi--hours-24]',
         textItalic: `He literally responds whether it's 12 AM or 12 PM" --Upwork client--`,
         paragraph: [
             "When you work with me, you're choosing a partner you can trust to handle your project with care and diligence.",
             "Whether it's web development, software solutions, or any other service, reliability is at the core of my work ethic.",
             'Ready to experience reliable service ?',
         ],
+        oas: 'fade-left',
     },
 ]);
 </script>
@@ -89,9 +92,9 @@ const allServices = ref([
                             <div class="avatar">
                                 <div
                                     class="w-12 !flex justify-center items-center ease-in-out transition-all duration-300 group-hover:bg-white bg-primary rounded-xl">
-                                    <Icon
-                                        :icon="data.icon"
-                                        class="text-3xl group-hover:text-primary ease-in-out transition-all duration-300 text-white"></Icon>
+                                    <span
+                                        :class="data.icon"
+                                        class="text-3xl group-hover:text-primary ease-in-out transition-all duration-300 text-white"></span>
                                 </div>
                             </div>
                             {{ data.label }}

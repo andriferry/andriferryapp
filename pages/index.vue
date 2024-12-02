@@ -16,7 +16,7 @@
                     class="prose mb-3">
                     <h1 class="text-info text-3xl capitalize lg:text-4xl">
                         Hello, It's Me
-                        <Icon icon="twemoji--waving-hand"></Icon>
+                        <span class="icon-[twemoji--waving-hand]"></span>
                     </h1>
                 </article>
             </Container>
