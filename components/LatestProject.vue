@@ -124,8 +124,3 @@
     </Wrapper>
 </template>
 
-<style>
-.card.image-full::before {
-    @apply bg-primary;
-}
-</style>
