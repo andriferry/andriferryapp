@@ -35,7 +35,7 @@ const socialMedia = ref([
 ]);
 
 const scroller = computed(() => {
-    return y.value > 0 ? 'bg-white p-2' : 'p-4 md:p-7 bg-transparent';
+    return y.value > 0 ? 'bg-white p-2 shadow-xl' : 'p-4 md:p-7 bg-transparent';
 });
 </script>
 

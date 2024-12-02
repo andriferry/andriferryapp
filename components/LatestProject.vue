@@ -8,7 +8,7 @@
                 data-aos="fade-down"
                 class="prose mb-3">
                 <h1 class="text-info text-3xl capitalize lg:text-4xl">
-                    Latest projects
+                    Featured projects
                 </h1>
             </article>
         </Container>
