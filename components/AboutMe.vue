@@ -175,9 +175,14 @@ const testimonials = ref([
                     and working with difference around the world. I'm always
                     interested in doing random things on my desk and build
                     something
+                    <NuxtLink to="/" class="text-primary">Read More</NuxtLink>
                 </p>
 
-                <h3 class="text-info">My Skills</h3>
+                <h3 class="text-info flex gap-3 items-center">
+                    My Skills
+                    <span
+                        class="icon-[twemoji--man-technologist] w-6 h-6"></span>
+                </h3>
 
                 <div class="container">
                     <div class="grid grid-cols-5 gap-3 lg:pr-28">
@@ -200,7 +205,11 @@ const testimonials = ref([
                 id="latest-project"
                 data-aos="fade-down"
                 class="prose mb-3">
-                <h3 class="text-info mt-5">Tools I use every day</h3>
+                <h3 class="text-info mt-5 flex items-center gap-3">
+                    Tools I use every day
+
+                    <span class="icon-[twemoji--hammer-and-pick]"></span>
+                </h3>
 
                 <div class="container">
                     <div class="grid grid-cols-5 gap-3 lg:pr-28">
@@ -242,14 +251,14 @@ const testimonials = ref([
                                 <div class="stat px-0">
                                     <ClientOnly>
                                         <AnimatedCounter
-                                            :value="90"
+                                            :value="39"
                                             :duration="1000"
-                                            class="mb-0 stat-value percentage text-5xl font-[800] text-h1 text-primary" />
+                                            class="mb-0 stat-value text-5xl font-[800] text-h1 text-primary" />
                                     </ClientOnly>
 
                                     <div
                                         class="stat-desc font-semibold text-sm">
-                                        of Works Completed
+                                        of Projects Completed
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +284,11 @@ const testimonials = ref([
                     </div>
                 </div>
 
-                <h3 class="text-info">What Some of my Clients Say</h3>
+                <h3 class="text-info flex items-center gap-3 mb-10">
+                    What Some of my Clients Say
+
+                    <span class="icon-[twemoji--star-struck] w-6 h-6"></span>
+                </h3>
 
                 <Carousel v-bind="config">
                     <Slide v-for="(data, index) in testimonials" :key="index">

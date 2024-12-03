@@ -40,8 +40,8 @@ const allServices = ref([
     <Wrapper>
         <Container class="grid gap-4 lg:grid-cols-2">
             <article class="prose" data-aos="fade-right">
-                <h1 class="text-info text-3xl lg:text-4xl">
-                    The ways I can help you
+                <h1 class="text-info text-3xl flex items-center gap-3 lg:text-4xl">
+                    The ways I can help you <span class="icon-[twemoji--memo] w-8 h-8"></span>
                 </h1>
 
                 <p class="text-accent italic">

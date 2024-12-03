@@ -7,8 +7,8 @@
                 id="latest-project"
                 data-aos="fade-down"
                 class="prose mb-3">
-                <h1 class="text-info text-3xl capitalize lg:text-4xl">
-                    Featured projects
+                <h1 class="text-info text-3xl flex items-center gap-3 capitalize lg:text-4xl">
+                    Featured projects <span class="icon-[twemoji--telescope] w-8 h-8"></span>
                 </h1>
             </article>
         </Container>
