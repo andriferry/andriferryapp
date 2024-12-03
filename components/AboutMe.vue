@@ -17,6 +17,7 @@ import Vite from '@/components/Icons/Vite.vue';
 import VsCode from '@/components/Icons/VsCode.vue';
 import Vue from '@/components/Icons/Vue.vue';
 import Vuetifyjs from '@/components/Icons/Vuetifyjs.vue';
+import jonahAC from 'assets/image/jonahAC.svg';
 import AnimatedCounter from 'vue-animated-counter';
 import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
@@ -142,6 +143,16 @@ const testimonials = ref([
         company: 'PayNet',
     },
 ]);
+
+const imgArray = [
+    'https://narimo.de/content/en/img/narimo.39pt.png',
+    'https://paynet.my/img/theme/logo.png',
+    jonahAC,
+    'https://www.foodwise.life/sites/all/themes/foodwise/images/logo_s.png',
+    'https://caznerstorage.blob.core.windows.net/orsostorage/Default/ProductImageFiles/a8f90b91-eb19-456b-830e-2245128a4517.png',
+    'https://cazneradminlive.orso.net.au/img/cazner-logo.8f55a3ea.svg',
+    'https://bramaleatire.com/bt_logo.png',
+];
 </script>
 
 <template>
@@ -302,7 +313,7 @@ const testimonials = ref([
                                         </p>
 
                                         <div
-                                            class="flex items-center gap-3 mt-4">
+                                            class="flex items-start gap-3 mt-4">
                                             <div class="avatar">
                                                 <div
                                                     class="mask shadow-xl mask-squircle w-10">
@@ -314,7 +325,8 @@ const testimonials = ref([
                                                 <p class="font-bold">
                                                     {{ data.name }}
                                                 </p>
-                                                <p class="text-xs font-light">
+                                                <p
+                                                    class="text-xs text-start font-light">
                                                     {{ data.company }}
                                                 </p>
                                             </div>
@@ -326,6 +338,13 @@ const testimonials = ref([
                     </Slide>
                 </Carousel>
             </article>
+        </Container>
+
+        <!-- Prototype -->
+        <Container>
+            <Vue3Marquee :clone="true" :duration="10">
+                <img v-for="(img, index) in imgArray" :key="index" :src="img" />
+            </Vue3Marquee>
         </Container>
     </Wrapper>
 </template>
