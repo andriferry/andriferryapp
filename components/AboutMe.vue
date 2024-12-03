@@ -17,12 +17,25 @@ import Vite from '@/components/Icons/Vite.vue';
 import VsCode from '@/components/Icons/VsCode.vue';
 import Vue from '@/components/Icons/Vue.vue';
 import Vuetifyjs from '@/components/Icons/Vuetifyjs.vue';
+import { AutoPlay } from '@egjs/flicking-plugins';
+import Flicking from '@egjs/vue3-flicking';
+import '@egjs/vue3-flicking/dist/flicking.css';
+// Or, if you have to support IE9
+import '@egjs/vue3-flicking/dist/flicking-inline.css';
 import jonahAC from 'assets/image/jonahAC.svg';
 import AnimatedCounter from 'vue-animated-counter';
-import { Carousel, Slide } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
 
-const iconsComponent = shallowRef([
+const plugins = ref([
+    new AutoPlay({ duration: 2000, direction: 'NEXT', stopOnHover: false }),
+]);
+
+const options = ref({
+    renderOnlyVisible: true,
+    circular: true,
+    defaultIndex: 2,
+});
+
+const iconsComponent = [
     {
         text: 'Nuxt',
         component: Nuxt,
@@ -85,9 +98,9 @@ const iconsComponent = shallowRef([
         text: 'Figma',
         component: Figma,
     },
-]);
+];
 
-const myTools = shallowRef([
+const myTools = [
     {
         text: 'VS Code',
         component: VsCode,
@@ -100,22 +113,7 @@ const myTools = shallowRef([
         text: 'Slack',
         component: Slack,
     },
-]);
-
-const config = {
-    autoplay: 2000,
-    wrapAround: true,
-    pauseAutoplayOnHover: true,
-    itemsToShow: 1.5,
-    transition: 500,
-};
-
-const experienceAge = computed(() => {
-    let birthday = new Date('2019-05-01');
-    var ageDifMs = Date.now() - birthday.getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-});
+];
 
 const testimonials = ref([
     {
@@ -301,51 +299,53 @@ const imgArray = [
                     <span class="icon-[twemoji--star-struck] w-6 h-6"></span>
                 </h3>
 
-                <Carousel v-bind="config">
-                    <Slide v-for="(data, index) in testimonials" :key="index">
-                        <div class="carousel__item">
-                            <div class="card bg-zinc-50 w-96 h-56">
-                                <div class="card-body">
-                                    <article
-                                        class="prose prose-img:!m-0 prose-p:!m-0">
-                                        <p class="text-justify">
-                                            {{ data.text }}
-                                        </p>
+                <div class="w-[390px] lg:w-full">
+                    <Flicking :options="options" :plugins="plugins" class="">
+                        <div
+                            v-for="(data, index) in testimonials"
+                            :key="index"
+                            data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            class="card bg-zinc-50 w-96 h-56 lg:mx-5">
+                            <div class="card-body">
+                                <article
+                                    class="prose prose-img:!m-0 prose-p:!m-0">
+                                    <p class="text-justify">
+                                        {{ data.text }}
+                                    </p>
 
-                                        <div
-                                            class="flex items-start gap-3 mt-4">
-                                            <div class="avatar">
-                                                <div
-                                                    class="mask shadow-xl mask-squircle w-10">
-                                                    <img :src="data.img" />
-                                                </div>
-                                            </div>
-
-                                            <div class="">
-                                                <p class="font-bold">
-                                                    {{ data.name }}
-                                                </p>
-                                                <p
-                                                    class="text-xs text-start font-light">
-                                                    {{ data.company }}
-                                                </p>
+                                    <div class="flex items-start gap-3 mt-4">
+                                        <div class="avatar">
+                                            <div
+                                                class="mask shadow-xl mask-squircle w-10">
+                                                <img :src="data.img" />
                                             </div>
                                         </div>
-                                    </article>
-                                </div>
+
+                                        <div class="">
+                                            <p class="font-bold">
+                                                {{ data.name }}
+                                            </p>
+                                            <p
+                                                class="text-xs text-start font-light">
+                                                {{ data.company }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </Slide>
-                </Carousel>
+                    </Flicking>
+                </div>
             </article>
         </Container>
 
         <!-- Prototype -->
-        <Container>
+        <!-- <Container>
             <Vue3Marquee :clone="true" :duration="10">
                 <img v-for="(img, index) in imgArray" :key="index" :src="img" />
             </Vue3Marquee>
-        </Container>
+        </Container> -->
     </Wrapper>
 </template>
 
