@@ -17,10 +17,12 @@ import VsCode from '@/components/Icons/VsCode.vue';
 import Vue from '@/components/Icons/Vue.vue';
 import Vuetifyjs from '@/components/Icons/Vuetifyjs.vue';
 import { AutoPlay } from '@egjs/flicking-plugins';
+import cazner from 'assets/image/caznerLogo.png';
 import jonahAC from 'assets/image/jonahAC.svg';
-import surveyLogo from "assets/image/survey-logo.svg"
-import cazner from "assets/image/caznerLogo.png"
-import orsoLogo from "assets/image/orsoLogo.png"
+import narimo from 'assets/image/narimo.png';
+import orsoLogo from 'assets/image/orsoLogo.png';
+import surveyLogo from 'assets/image/survey-logo.svg';
+import paynetMy from "assets/image/paynetMy.png"
 
 export function useAboutMe() {
     const plugins = ref([
@@ -140,5 +142,17 @@ export function useAboutMe() {
         },
     ]);
 
-    return { iconsComponent, myTools, jonahAC, testimonials, plugins, options, surveyLogo, cazner, orsoLogo };
+    return {
+        iconsComponent,
+        myTools,
+        jonahAC,
+        testimonials,
+        plugins,
+        options,
+        surveyLogo,
+        cazner,
+        orsoLogo,
+        narimo,
+        paynetMy
+    };
 }

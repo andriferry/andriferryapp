@@ -13,11 +13,13 @@ const {
     surveyLogo,
     cazner,
     orsoLogo,
+    narimo,
+    paynetMy,
 } = useAboutMe();
 
 const imgArray = [
-    'https://narimo.de/content/en/img/narimo.39pt.png',
-    'https://paynet.my/img/theme/logo.png',
+    narimo,
+    paynetMy,
     jonahAC,
     surveyLogo,
     orsoLogo,
@@ -170,7 +172,7 @@ const imgArray = [
                 <h3 class="text-info flex items-center gap-3 mb-10">
                     What Some of my Clients Say
 
-                    <span class="icon-[twemoji--star-struck] w-6 h-6"></span>
+                    <span class="icon-[logos--partytown-icon] w-6 h-6"></span>
                 </h3>
 
                 <div class="w-[390px] lg:w-full">
@@ -223,7 +225,7 @@ const imgArray = [
                 <h3 class="text-info mt-5 flex items-center gap-3">
                     Freelancers Client
 
-                    <span class="icon-[twemoji--hammer-and-pick]"></span>
+                    <span class="icon-[emojione--office-building]"></span>
                 </h3>
                 <p class="text-accent text-sm">
                     We prioritize building strong and meaningful connections,
@@ -239,6 +241,15 @@ const imgArray = [
                         v-for="(data, index) in imgArray"
                         :key="index">
                         <img :src="data" class="w-40" alt="" />
+                    </div>
+
+                    <div
+                        data-aos="zoom-in-up"
+                        class="flex justify-center items-center">
+                        <img
+                            class="w-10 lg:w-16"
+                            src="https://derp-prod.orq.app/assets/77a4293b-45e6-4ec2-8c4c-195d0013ff44"
+                            alt="" />
                     </div>
                 </div>
             </div>
