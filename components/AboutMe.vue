@@ -222,7 +222,7 @@ const imgArray = [
                 id="latest-project"
                 data-aos="fade-down"
                 class="prose mb-3">
-                <h3 class="text-info mt-5 flex items-center gap-3">
+                <h3 class="text-info my-5 flex items-center gap-3">
                     Freelancers Client
 
                     <span class="icon-[emojione--office-building]"></span>

@@ -1,4 +1,37 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NuxtThumbnail from 'assets/image/articles/NuxtTumbnail.png';
+
+const articles = ref([
+    {
+        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        img: NuxtThumbnail,
+        date: 'Oct 26, 2024',
+        url: '/blog'
+    },
+    {
+        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        img: NuxtThumbnail,
+        date: 'Oct 26, 2024',
+        url: '/blog'
+    },
+    {
+        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        img: NuxtThumbnail,
+        date: 'Oct 26, 2024',
+        url: '/blog'
+    },
+    {
+        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        img: NuxtThumbnail,
+        date: 'Oct 26, 2024',
+        url: '/blog'
+    },
+]);
+</script>
 
 <template>
     <div>
@@ -16,12 +49,14 @@
                     <article class="prose">
                         <h3 class="text-info flex gap-3 items-center">
                             Recent Articles
-                            <span
-                                class="icon-[bi--rss-fill] w-6 h-6"></span>
+                            <span class="icon-[bi--rss-fill] w-6 h-6"></span>
                         </h3>
                     </article>
                 </div>
-                <Article v-for="data in 4" :key="data"></Article>
+                <ArticleShowCase
+                    v-for="(data, index) in articles"
+                    :key="index"
+                    v-bind="data" />
             </Container>
         </div>
     </div>
