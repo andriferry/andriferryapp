@@ -3,16 +3,25 @@ import Flicking from '@egjs/vue3-flicking';
 import '@egjs/vue3-flicking/dist/flicking.css';
 import AnimatedCounter from 'vue-animated-counter';
 
-const { iconsComponent, myTools, testimonials, jonahAC, plugins, options } =
-    useAboutMe();
+const {
+    iconsComponent,
+    myTools,
+    testimonials,
+    jonahAC,
+    plugins,
+    options,
+    surveyLogo,
+    cazner,
+    orsoLogo,
+} = useAboutMe();
 
 const imgArray = [
     'https://narimo.de/content/en/img/narimo.39pt.png',
     'https://paynet.my/img/theme/logo.png',
     jonahAC,
-    'https://www.foodwise.life/sites/all/themes/foodwise/images/logo_s.png',
-    'https://caznerstorage.blob.core.windows.net/orsostorage/Default/ProductImageFiles/a8f90b91-eb19-456b-830e-2245128a4517.png',
-    'https://cazneradminlive.orso.net.au/img/cazner-logo.8f55a3ea.svg',
+    surveyLogo,
+    orsoLogo,
+    cazner,
     'https://bramaleatire.com/bt_logo.png',
 ];
 </script>
@@ -100,6 +109,7 @@ const imgArray = [
                     </div>
 
                     <div
+                        data-aos="flip-down"
                         class="grid grid-cols-2 sm:grid-cols-3 py-4 mt-10 border-b border-slate-100">
                         <div class="flex justify-center items-center">
                             <div class="stats">
@@ -205,11 +215,34 @@ const imgArray = [
         </Container>
 
         <!-- Prototype -->
-        <!-- <Container>
-            <Vue3Marquee :clone="true" :duration="10">
-                <img v-for="(img, index) in imgArray" :key="index" :src="img" />
-            </Vue3Marquee>
-        </Container> -->
+        <Container>
+            <article
+                id="latest-project"
+                data-aos="fade-down"
+                class="prose mb-3">
+                <h3 class="text-info mt-5 flex items-center gap-3">
+                    Freelancers Client
+
+                    <span class="icon-[twemoji--hammer-and-pick]"></span>
+                </h3>
+                <p class="text-accent text-sm">
+                    We prioritize building strong and meaningful connections,
+                    understanding that lasting relationships are the foundation
+                    of personal and professional success.
+                </p>
+            </article>
+            <div class="card bg-slate-100 mt-4">
+                <div class="grid grid-cols-4 card-body">
+                    <div
+                        data-aos="zoom-in-up"
+                        class="flex justify-center items-center"
+                        v-for="(data, index) in imgArray"
+                        :key="index">
+                        <img :src="data" class="w-40" alt="" />
+                    </div>
+                </div>
+            </div>
+        </Container>
     </Wrapper>
 </template>
 

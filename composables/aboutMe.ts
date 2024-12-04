@@ -18,6 +18,9 @@ import Vue from '@/components/Icons/Vue.vue';
 import Vuetifyjs from '@/components/Icons/Vuetifyjs.vue';
 import { AutoPlay } from '@egjs/flicking-plugins';
 import jonahAC from 'assets/image/jonahAC.svg';
+import surveyLogo from "assets/image/survey-logo.svg"
+import cazner from "assets/image/caznerLogo.png"
+import orsoLogo from "assets/image/orsoLogo.png"
 
 export function useAboutMe() {
     const plugins = ref([
@@ -137,5 +140,5 @@ export function useAboutMe() {
         },
     ]);
 
-    return { iconsComponent, myTools, jonahAC, testimonials, plugins, options };
+    return { iconsComponent, myTools, jonahAC, testimonials, plugins, options, surveyLogo, cazner, orsoLogo };
 }
