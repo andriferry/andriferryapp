@@ -77,7 +77,7 @@ const allServices = ref([
         <Container class="relative">
             <article data-aos="fade-down" class="prose mb-3">
                 <h1 class="text-info text-3xl lg:text-4xl">
-                    "I take all of that off your shoulders and get the job done
+                    <span class="icon-[codicon--quote] w-10 h-10"></span> I take all of that off your shoulders and get the job done
 
                     <span class="icon-[fluent-color--beach-20] w-10 h-10"></span>
                 </h1>
