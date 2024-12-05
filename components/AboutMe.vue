@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Flicking from '@egjs/vue3-flicking';
-import '@egjs/vue3-flicking/dist/flicking.css';
 import AnimatedCounter from 'vue-animated-counter';
 
 const {
@@ -29,10 +28,9 @@ const imgArray = [
 
 const { width } = useWindowSize();
 
-
-const widthCarousel = computed( () => {
-    return width.value >= 400 ? 'w-[400px]': 'w-[330px]'
-})
+const widthCarousel = computed(() => {
+    return width.value >= 400 ? 'w-[400px]' : 'w-[330px]';
+});
 </script>
 
 <template>
@@ -66,7 +64,9 @@ const widthCarousel = computed( () => {
                     and working with difference around the world. I'm always
                     interested in doing random things on my desk and build
                     something
-                    <NuxtLink to="/" class="text-primary">Read More</NuxtLink>
+                    <NuxtLink to="/aboutme" class="text-primary">
+                        Read More
+                    </NuxtLink>
                 </p>
 
                 <h3 class="text-info flex gap-3 items-center">

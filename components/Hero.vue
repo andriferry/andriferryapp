@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import Flicking from '@egjs/vue3-flicking';
+const { width } = useWindowSize();
 const config = useRuntimeConfig();
+
+const { plugins, options } = useAboutMe();
 
 const testimonial = ref([
     {
@@ -19,6 +23,10 @@ const testimonial = ref([
         text: `We were in need of a Vue.js developer that could adjust a Vue template to our Figma design and connect the GUI to our backend API. Thanks to Andri`,
     },
 ]);
+
+const widthCarousel = computed(() => {
+    return width.value >= 400 ? 'w-[400px]' : 'w-[330px]';
+});
 </script>
 
 <template>
@@ -115,6 +123,38 @@ const testimonial = ref([
                                     </p>
                                 </article>
                             </div>
+                        </div>
+
+                        <div :class="widthCarousel" class="block lg:hidden">
+                            <Flicking
+                                :options="options"
+                                :plugins="plugins"
+                                class="">
+                                <div
+                                    v-for="(data, index) in testimonial"
+                                    :key="index"
+                                    class="card bg-base-100 shadow-2xl  w-full">
+                                    <div class="card-body">
+                                        <article
+                                            class="prose text-info-content">
+                                            <p>
+                                                {{ data.text }}
+                                            </p>
+
+                                            <div class="rating">
+                                                <input
+                                                    v-for="rating in 5"
+                                                    :key="rating"
+                                                    class="mask mask-star-2 bg-warning" />
+                                            </div>
+
+                                            <p class="font-medium mt-0">
+                                                Upwork Client
+                                            </p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </Flicking>
                         </div>
                     </div>
                 </ClientOnly>

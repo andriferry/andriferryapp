@@ -14,6 +14,10 @@ const routes = ref([
         link: '/project',
     },
     {
+        route: 'About Me',
+        link: '/aboutme',
+    },
+    {
         route: 'Blogs',
         link: '/blog',
     },

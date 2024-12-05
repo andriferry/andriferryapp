@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     },
     devtools: { enabled: true },
     modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@vueuse/nuxt'],
-    css: ['~/assets/css/tailwind.css'],
+    css: ['~/assets/css/tailwind.css', '@egjs/vue3-flicking/dist/flicking.css'],
     tailwindcss: {
         viewer: false,
     },
