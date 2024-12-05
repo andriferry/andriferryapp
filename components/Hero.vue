@@ -70,10 +70,11 @@ const testimonial = ref([
                         </article>
 
                         <div class="flex gap-2 items-center mt-3">
-                            <button
-                                class="btn bg-primary transition-all hover:bg-info group flex items-center gap-3 text-white rounded-xl">
+                            <NuxtLink
+                                to="/project"
+                                class="btn bg-primary hover:bg-primary/80 hover:border-primary/80 transition-all hover:bg-info group flex items-center gap-3 text-white rounded-xl">
                                 <span>View Our Works</span>
-                            </button>
+                            </NuxtLink>
 
                             <button class="btn btn-active btn-link">
                                 Contact me
@@ -97,7 +98,7 @@ const testimonial = ref([
                             :key="index"
                             data-aos="zoom-in-up"
                             :class="data.class"
-                            class="card bg-base-100 shadow-2xl drop-shadow-2xl absolute w-[350px]">
+                            class="card bg-base-100 hidden lg:block shadow-2xl drop-shadow-2xl absolute w-[350px]">
                             <div class="card-body">
                                 <article class="prose text-info-content">
                                     <p>"{{ data.text }}"</p>

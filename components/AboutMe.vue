@@ -26,6 +26,13 @@ const imgArray = [
     cazner,
     'https://bramaleatire.com/bt_logo.png',
 ];
+
+const { width } = useWindowSize();
+
+
+const widthCarousel = computed( () => {
+    return width.value >= 400 ? 'w-[400px]': 'w-[330px]'
+})
 </script>
 
 <template>
@@ -47,14 +54,14 @@ const imgArray = [
                     </div>
                 </div>
 
-                <p class="text-accent mt-0">
+                <p class="text-accent mt-0 text-justify">
                     I'm Andri Ferry, I work as a remote worker, software
                     developer, designer almost 5 years based from Jakarta
                     Indonesia. I specialize development Saas product app using
                     Javascript, Vuejs , Nuxtjs, Reactjs, Tailwindcss, Vuetifyjs,
                     Nextjs.
                 </p>
-                <p class="text-accent">
+                <p class="text-accent text-justify">
                     Almost 5 years i was spent more than 3000 hours at Upwork
                     and working with difference around the world. I'm always
                     interested in doing random things on my desk and build
@@ -79,7 +86,7 @@ const imgArray = [
                             :data-tip="data.text">
                             <component
                                 :is="data.component"
-                                class="w-16 h-16 rounded-2xl hover:shadow-2xl shadow-xl cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out" />
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-lg lg:rounded-2xl hover:shadow-2xl shadow-xl cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out" />
                         </div>
                     </div>
                 </div>
@@ -106,7 +113,7 @@ const imgArray = [
                             data-aos-easing="ease-out-cubic">
                             <component
                                 :is="data.component"
-                                class="w-16 h-16 rounded-2xl hover:shadow-2xl shadow-xl cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out" />
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-lg lg:rounded-2xl hover:shadow-2xl shadow-xl cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out" />
                         </div>
                     </div>
 
@@ -175,7 +182,7 @@ const imgArray = [
                     <span class="icon-[logos--partytown-icon] w-6 h-6"></span>
                 </h3>
 
-                <div class="w-[390px] lg:w-full">
+                <div :class="widthCarousel" class="lg:w-full overflow-hidden">
                     <Flicking :options="options" :plugins="plugins" class="">
                         <div
                             v-for="(data, index) in testimonials"

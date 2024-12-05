@@ -18,10 +18,10 @@ defineProps<Props>();
                 <img :src="img" />
             </figure>
             <div class="card-body">
-                <h2 class="card-title">
+                <h2 class="card-title text-info">
                     {{ title }}
                 </h2>
-                <p>{{ subtitle }}</p>
+                <p class="text-accent">{{ subtitle }}</p>
                 <div class="card-actions mt-3 justify-between">
                     <div class="avatar">
                         <div class="mask shadow-xl mask-squircle w-5">

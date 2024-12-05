@@ -98,7 +98,7 @@ const scroller = computed(() => {
 
                         <div class="navbar-end">
                             <button
-                                class="btn btn-sm btn-primary hover:btn-info hover:text-white text-white">
+                                class="btn btn-sm btn-primary hover:btn-info hover:bg-primary/80 hover:border-primary/80 hover:text-white text-white">
                                 Contact
                                 <span
                                     class="icon-[majesticons--open] h-4 w-4"></span>
