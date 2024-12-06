@@ -78,14 +78,13 @@ useHead({
                                         </div>
 
                                         <div class="text-sm my-2 font-semibold">
-                                            <!-- Client Country: USA -->
                                             {{ data.clientStatus }}
                                         </div>
 
-                                        <!-- Text -->
+                                        {{ data.text }}
 
                                         <div
-                                            class="flex gap-3 justify-start mt-3"
+                                            class="flex flex-wrap gap-3 justify-start mt-3"
                                             :class="data.stackClass">
                                             <component
                                                 v-for="(
@@ -102,6 +101,17 @@ useHead({
                                         " />
                                 </li>
                             </ul>
+
+                            <h2 class="card-title mt-0">
+                                <span
+                                    class="text-transparent absolute box-content w-fit bg-clip-text blur-xl bg-gradient-to-r from-primary to-secondary">
+                                    Testimonials
+                                </span>
+                                <span
+                                    class="text-transparent relative bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                                    Testimonials
+                                </span>
+                            </h2>
                         </div>
                     </div>
                 </article>

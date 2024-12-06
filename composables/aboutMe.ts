@@ -24,11 +24,17 @@ import narimo from 'assets/image/narimo.png';
 import orsoLogo from 'assets/image/orsoLogo.png';
 import paynetMy from 'assets/image/paynetMy.png';
 import surveyLogo from 'assets/image/survey-logo.svg';
+import Axios from '~/components/Icons/Axios.vue';
+import Bootstrap from '~/components/Icons/Bootstrap.vue';
 import Bulma from '~/components/Icons/Bulma.vue';
 import Chartjs from '~/components/Icons/Chartjs.vue';
 import CkEditor from '~/components/Icons/CkEditor.vue';
+import Gitlab from '~/components/Icons/Gitlab.vue';
 import Golang from '~/components/Icons/Golang.vue';
+import GoogleMaps from '~/components/Icons/GoogleMaps.vue';
+import Jira from '~/components/Icons/Jira.vue';
 import LaravelNova from '~/components/Icons/LaravelNova.vue';
+import Quasar from '~/components/Icons/Quasar.vue';
 
 export function useAboutMe() {
     const plugins = ref([
@@ -194,6 +200,24 @@ export function useAboutMe() {
                 clientStatus: 'DreamFast (Australia)',
                 class: 'timeline-start md:text-end',
                 stack: [Vue, Laravel, Tailwindcss],
+                stackClass: 'lg:justify-end',
+            },
+            {
+                date: '29 Sep 2021 - 30 Mar 2024',
+                title: 'Vuejs / Quasar Developer',
+                text: 'Narimo Systems ia an saas provide geo-related web infrastructure, geodata management & publication and geographic information systems.',
+                clientStatus: 'narimo systems (German)',
+                class: 'timeline-end',
+                stack: [Vue, Quasar, Gitlab, Axios],
+                stackClass: '',
+            },
+            {
+                date: 'Dec 2021 - June 2022',
+                title: 'Vuejs Developer',
+                text: 'Sass maps to provide data insights to create climate resilient urban infrastructure, using geospatial AI, and nature based adaptation solutions',
+                clientStatus: 'Cittamap (Netherlands)',
+                class: 'timeline-start md:text-end',
+                stack: [Vue, Chartjs, GoogleMaps, Axios, Bootstrap, Jira],
                 stackClass: 'lg:justify-end',
             },
         ];
