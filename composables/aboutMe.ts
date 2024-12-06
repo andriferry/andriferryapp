@@ -4,6 +4,7 @@ import Git from '@/components/Icons/Git.vue';
 import GoogleCloudApi from '@/components/Icons/GoogleCloudApi.vue';
 import Html from '@/components/Icons/Html.vue';
 import Javascript from '@/components/Icons/Javascript.vue';
+import Laravel from '@/components/Icons/Laravel.vue';
 import Next from '@/components/Icons/Next.vue';
 import Nuxt from '@/components/Icons/Nuxt.vue';
 import Pinia from '@/components/Icons/Pinia.vue';
@@ -23,6 +24,11 @@ import narimo from 'assets/image/narimo.png';
 import orsoLogo from 'assets/image/orsoLogo.png';
 import paynetMy from 'assets/image/paynetMy.png';
 import surveyLogo from 'assets/image/survey-logo.svg';
+import Bulma from '~/components/Icons/Bulma.vue';
+import Chartjs from '~/components/Icons/Chartjs.vue';
+import CkEditor from '~/components/Icons/CkEditor.vue';
+import Golang from '~/components/Icons/Golang.vue';
+import LaravelNova from '~/components/Icons/LaravelNova.vue';
 
 export function useAboutMe() {
     const plugins = ref([
@@ -142,6 +148,57 @@ export function useAboutMe() {
         },
     ]);
 
+    const workHistory = computed(() => {
+        return [
+            {
+                date: '2 February 2021 - 16 June 2021',
+                title: 'Laravel Developer',
+                text: '',
+                clientStatus: 'Max Smith (USA)',
+                class: 'timeline-start md:text-end',
+                stack: [Laravel, LaravelNova, Vue, Vuetifyjs],
+                stackClass: 'lg:justify-end',
+            },
+            {
+                date: '12 July 2021 - 28 Apr 2022',
+                title: 'VueJS developer Golang Backend',
+                text: '',
+                clientStatus: 'Jonah and Associates Pty Ltd  (New Zealand)',
+                class: 'timeline-end',
+                stack: [Vue, Golang, Bulma, Chartjs],
+                stackClass: '',
+            },
+
+            {
+                date: '28 August 2021 - 7 Sep 2021',
+                title: 'Compose message (similar to email) in VueJS',
+                text: '',
+                clientStatus: 'Helmi Hasan (Malaysia)',
+                class: 'timeline-start md:text-end',
+                stack: [Vue, Vuetifyjs, CkEditor],
+                stackClass: 'lg:justify-end',
+            },
+            {
+                date: '06 Sep 2021 - 9 Sep 2021',
+                title: 'Looking for Vue and nuxt.js developer for a small task',
+                text: '',
+                clientStatus: 'Santosh Kumar (India)',
+                class: 'timeline-end',
+                stack: [Vue, Nuxt, Vuetifyjs],
+                stackClass: '',
+            },
+            {
+                date: '21 Sep 2021 - 20 Dec 2021',
+                title: 'Vuejs / TailwindCSS Front End and Laravel Backend Skills Required',
+                text: '',
+                clientStatus: 'DreamFast (Australia)',
+                class: 'timeline-start md:text-end',
+                stack: [Vue, Laravel, Tailwindcss],
+                stackClass: 'lg:justify-end',
+            },
+        ];
+    });
+
     return {
         iconsComponent,
         myTools,
@@ -154,5 +211,7 @@ export function useAboutMe() {
         orsoLogo,
         narimo,
         paynetMy,
+        Laravel,
+        workHistory,
     };
 }
