@@ -83,8 +83,23 @@ useHead({
 
                                         {{ data.text }}
 
-                                        <div
-                                            class="flex flex-wrap gap-3 justify-start mt-3"
+                                        <div :class="data.stackClass !== ''? 'lg:justify-end':'lg:justify-start'"
+                                            class="flex justify-start mt-3 items-center">
+                                            <div
+                                                class="flex flex-wrap gap-3 w-full mt-0 lg:w-96 justify-start"
+                                                :class="data.stackClass">
+                                                <component
+                                                    v-for="(
+                                                        stack, indexStack
+                                                    ) in data.stack"
+                                                    :key="indexStack"
+                                                    :is="stack"
+                                                    class="w-10 h-10 transition-all duration-300 ease-in-out" />
+                                            </div>
+                                        </div>
+
+                                        <!-- <div
+                                            class="flex flex-wrap gap-3 w-full lg:w-96 justify-start mt-3"
                                             :class="data.stackClass">
                                             <component
                                                 v-for="(
@@ -93,7 +108,7 @@ useHead({
                                                 :key="indexStack"
                                                 :is="stack"
                                                 class="w-10 h-10 transition-all duration-300 ease-in-out" />
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <hr
                                         v-if="

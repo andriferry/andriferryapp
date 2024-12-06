@@ -29,12 +29,21 @@ import Bootstrap from '~/components/Icons/Bootstrap.vue';
 import Bulma from '~/components/Icons/Bulma.vue';
 import Chartjs from '~/components/Icons/Chartjs.vue';
 import CkEditor from '~/components/Icons/CkEditor.vue';
+import Clickup from '~/components/Icons/Clickup.vue';
+import Cloudflare from '~/components/Icons/Cloudflare.vue';
+import Directus from '~/components/Icons/Directus.vue';
+import Firebase from '~/components/Icons/Firebase.vue';
 import Gitlab from '~/components/Icons/Gitlab.vue';
 import Golang from '~/components/Icons/Golang.vue';
 import GoogleMaps from '~/components/Icons/GoogleMaps.vue';
 import Jira from '~/components/Icons/Jira.vue';
 import LaravelNova from '~/components/Icons/LaravelNova.vue';
+import Mailgun from '~/components/Icons/Mailgun.vue';
+import Postgresql from '~/components/Icons/Postgresql.vue';
 import Quasar from '~/components/Icons/Quasar.vue';
+import Sentry from '~/components/Icons/Sentry.vue';
+import Shopify from '~/components/Icons/Shopify.vue';
+import XD from '~/components/Icons/XD.vue';
 
 export function useAboutMe() {
     const plugins = ref([
@@ -204,7 +213,7 @@ export function useAboutMe() {
             },
             {
                 date: '29 Sep 2021 - 30 Mar 2024',
-                title: 'Vuejs / Quasar Developer',
+                title: 'Vuejs Developer | Quasar Framework',
                 text: 'Narimo Systems ia an saas provide geo-related web infrastructure, geodata management & publication and geographic information systems.',
                 clientStatus: 'narimo systems (German)',
                 class: 'timeline-end',
@@ -218,6 +227,65 @@ export function useAboutMe() {
                 clientStatus: 'Cittamap (Netherlands)',
                 class: 'timeline-start md:text-end',
                 stack: [Vue, Chartjs, GoogleMaps, Axios, Bootstrap, Jira],
+                stackClass: 'lg:justify-end',
+            },
+            {
+                date: 'Marc 2023 - Marc 2024',
+                title: 'Vuejs Developer | Quasar Framework',
+                text: 'Digital Agency & Solution',
+                clientStatus: 'Synque Limited (Hong Kong)',
+                class: 'timeline-end',
+                stack: [
+                    Vue,
+                    Quasar,
+                    Tailwindcss,
+                    Typescript,
+                    Figma,
+                    Pinia,
+                    Firebase,
+                    Sentry,
+                    Cloudflare,
+                    Directus,
+                    Axios,
+                    Clickup,
+                ],
+                stackClass: '',
+            },
+            {
+                date: '2 March 2023 - May 2024',
+                title: 'Vuejs Developer',
+                text: 'Connecting promotional Suppliers, Distributors; End Customers with a functional, simple, straightforward SAAS platform',
+                clientStatus: 'Cazner Pty Ltd (Australia)',
+                class: 'timeline-start md:text-end',
+                stack: [Vue, Bootstrap, XD, Axios],
+                stackClass: 'lg:justify-end',
+            },
+            {
+                date: 'Jan 2024 - Marc 2024',
+                title: 'Nuxt Js Developer',
+                text: 'All-in-One SaaS Solution for Holistic Student Success',
+                clientStatus: 'Kinobi Technologies indonesia (Indonesia)',
+                class: 'timeline-end',
+                stack: [Vue, Nuxt, Tailwindcss, Typescript, Clickup],
+                stackClass: '',
+            },
+            {
+                date: '14 May 2024 -  29 Oct 2024',
+                title: 'Nuxt Developer | Directus CMS | Shopify',
+                text: 'Connecting promotional Suppliers, Distributors; End Customers with a functional, simple, straightforward SAAS platform',
+                clientStatus: 'Foodwise Life | 7APP (Italy)',
+                class: 'timeline-start md:text-end',
+                stack: [
+                    Vue,
+                    Nuxt,
+                    Tailwindcss,
+                    Typescript,
+                    Shopify,
+                    Directus,
+                    GoogleCloudApi,
+                    Postgresql,
+                    Mailgun,
+                ],
                 stackClass: 'lg:justify-end',
             },
         ];
