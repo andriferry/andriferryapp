@@ -58,8 +58,8 @@ const widthCarousel = computed(() => {
                         <article
                             class="prose text-sm md:text-xl w-3/4 text-accent font-medium">
                             <p>
-                                Highly skilled Vuejs developer with 5 years of
-                                experience in frontend development.
+                                Highly skilled Full Stack developer with 5 years
+                                of experience in frontend development.
 
                                 <span
                                     class="text-transparent absolute box-content w-fit bg-clip-text blur-xl bg-gradient-to-r from-primary to-secondary">
@@ -133,7 +133,7 @@ const widthCarousel = computed(() => {
                                 <div
                                     v-for="(data, index) in testimonial"
                                     :key="index"
-                                    class="card bg-base-100 shadow-2xl  w-full">
+                                    class="card bg-base-100 shadow-2xl w-full">
                                     <div class="card-body">
                                         <article
                                             class="prose text-info-content">

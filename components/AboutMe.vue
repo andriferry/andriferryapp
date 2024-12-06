@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Flicking from '@egjs/vue3-flicking';
-import AnimatedCounter from 'vue-animated-counter';
 
 const {
     iconsComponent,
@@ -117,63 +116,7 @@ const widthCarousel = computed(() => {
                         </div>
                     </div>
 
-                    <div
-                        data-aos="flip-down"
-                        class="grid grid-cols-2 sm:grid-cols-3 py-4 mt-10 border-b border-slate-100">
-                        <div class="flex justify-center items-center">
-                            <div class="stats">
-                                <div class="stat px-0">
-                                    <ClientOnly>
-                                        <AnimatedCounter
-                                            :value="5"
-                                            :duration="1000"
-                                            class="mb-0 stat-value plus text-5xl font-[800] text-h1 text-primary" />
-                                    </ClientOnly>
-
-                                    <div
-                                        class="stat-desc font-semibold text-sm">
-                                        years of Experience
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-center items-center">
-                            <div class="stats">
-                                <div class="stat px-0">
-                                    <ClientOnly>
-                                        <AnimatedCounter
-                                            :value="39"
-                                            :duration="1000"
-                                            class="mb-0 stat-value text-5xl font-[800] text-h1 text-primary" />
-                                    </ClientOnly>
-
-                                    <div
-                                        class="stat-desc font-semibold text-sm">
-                                        of Projects Completed
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-center items-center">
-                            <div class="stats">
-                                <div class="stat px-0">
-                                    <ClientOnly>
-                                        <AnimatedCounter
-                                            :value="100"
-                                            :duration="1000"
-                                            class="mb-0 stat-value percentage text-5xl font-[800] text-h1 text-primary" />
-                                    </ClientOnly>
-
-                                    <div
-                                        class="stat-desc font-semibold text-sm">
-                                        Job Success Score
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Stats />
                 </div>
 
                 <h3 class="text-info flex items-center gap-3 mb-10">
@@ -189,11 +132,11 @@ const widthCarousel = computed(() => {
                             :key="index"
                             data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
-                            class="card bg-zinc-50 w-96 h-56 lg:mx-5">
+                            class="card bg-zinc-50 w-96 h-64 lg:mx-5">
                             <div class="card-body">
                                 <article
                                     class="prose prose-img:!m-0 prose-p:!m-0">
-                                    <p class="text-justify">
+                                    <p class="text-justify h-36 line-clamp-5">
                                         {{ data.text }}
                                     </p>
 
@@ -263,13 +206,3 @@ const widthCarousel = computed(() => {
         </Container>
     </Wrapper>
 </template>
-
-<style>
-.percentage::after {
-    content: ' %';
-}
-
-.plus::after {
-    content: ' +';
-}
-</style>

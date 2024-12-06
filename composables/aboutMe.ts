@@ -21,8 +21,8 @@ import cazner from 'assets/image/caznerLogo.png';
 import jonahAC from 'assets/image/jonahAC.svg';
 import narimo from 'assets/image/narimo.png';
 import orsoLogo from 'assets/image/orsoLogo.png';
+import paynetMy from 'assets/image/paynetMy.png';
 import surveyLogo from 'assets/image/survey-logo.svg';
-import paynetMy from "assets/image/paynetMy.png"
 
 export function useAboutMe() {
     const plugins = ref([
@@ -117,19 +117,19 @@ export function useAboutMe() {
 
     const testimonials = ref([
         {
-            text: "He's working well with the entire team, gives frequent feedback about his progress, responds quickly, is available and easy to work with. Thanks, Andri.",
+            text: 'Andri has supported us in our project for re-developing a mobile and web-based GIS Application based on Vue.js. He has helped us a lot to get forward with the project, has developed to be very productive in developing new features and bugfixing equally. Andri is working well with the entire team, gives frequent feedback about his progress, responds quickly, is available and easy to work with. I definitely recommend working with Andri and am looking forward to do the same',
             img: 'https://www.upwork.com/profile-portraits/c17vsiSaxPorjR2E4zzi7SxvOTdzKME0srnDaaC_tlq1Fy59iuET1C91ZxGkd3MJQE',
             name: 'Ulrich Mann',
             company: 'Narimo systems',
         },
         {
-            text: "Andri is a persistent man. He doesn't give up easily. A good-natured guy with a good work ethic. He is nearly always available. I have never seen him go offline",
+            text: "Andri is a persistent man. He doesn't give up easily. A good-natured guy with a good work ethic. He is nearly always available. I have never seen him go offline. He literally responds whether it's 12 AM or 12 PM. He works around the clock to get the job done. He never said No even if the work we gave him sometimes fell outside the scope of the project. I highly recommend him. He is a fast learner",
             img: 'https://www.upwork.com/profile-portraits/c1Ytdxg7i-qp0r7cfXBqzdlG4IMHKVFCQAGzBxoqjYVDcxTplBYcEJb-OHABRWrfH8',
             name: 'Roshan Jonnalagadda',
             company: 'Jonah and Associates Pty Ltd',
         },
         {
-            text: 'Great to work with and can work with Tailwind CSS within vuejs fine. We had one project here we had hired Andri for ...',
+            text: 'Great to work with and can work with Tailwind CSS within vuejs fine. We had one project here we had hired Andri for -  I will be hiring Andri again for any Tailwind CSS / front end work',
             img: 'https://www.upwork.com/profile-portraits/c1y5663lpxcND-IA7isd0LhwRfgp-GdppGKVQqAZuz943r2xbUVudKvEF55CiivVxX',
             name: 'Nathan Sapwell',
             company: 'DreamFast',
@@ -153,6 +153,6 @@ export function useAboutMe() {
         cazner,
         orsoLogo,
         narimo,
-        paynetMy
+        paynetMy,
     };
 }
