@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    title: 'About Me',
+});
+const route = useRoute();
+
+useHead({
+    titleTemplate: (titleChunk) => {
+        return `${titleChunk} - ${route.meta.title}`;
+    },
+});
+</script>
 
 <template>
     <Wrapper class="pt-16 lg:pt-36">

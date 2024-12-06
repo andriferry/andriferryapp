@@ -1,34 +1,45 @@
 <script setup lang="ts">
 import NuxtThumbnail from 'assets/image/articles/NuxtTumbnail.png';
 
+definePageMeta({
+    title: 'Home',
+});
+const route = useRoute();
+
+useHead({
+    titleTemplate: (titleChunk) => {
+        return `${titleChunk} - ${route.meta.title}`;
+    },
+});
+
 const articles = ref([
     {
         title: 'Introduce Nutxjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
-        url: '/blog'
+        url: '/blog',
     },
     {
         title: 'Introduce Nutxjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
-        url: '/blog'
+        url: '/blog',
     },
     {
         title: 'Introduce Nutxjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
-        url: '/blog'
+        url: '/blog',
     },
     {
         title: 'Introduce Nutxjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
-        url: '/blog'
+        url: '/blog',
     },
 ]);
 </script>
