@@ -34,7 +34,7 @@ const stats = ref([
                         <AnimatedCounter
                             :duration="1000"
                             v-bind="data"
-                            class="mb-0 stat-value text-5xl font-[800] text-h1 text-primary" />
+                            class="mb-0 stat-value text-5xl lg:text-6xl font-[800] text-primary" />
                     </ClientOnly>
 
                     <div class="stat-desc font-semibold text-sm">

@@ -17,7 +17,6 @@
 
         <Container class="pt-0">
             <div class="grid gap-10">
-
                 <div class="col-span-1">
                     <div class="card bg-[#a87df8] shadow-lg min-h-96">
                         <div
@@ -39,7 +38,7 @@
 
                                         <button
                                             class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
-                                            Case Study
+                                            See More
                                         </button>
                                     </article>
                                 </div>
@@ -94,7 +93,7 @@
 
                                         <button
                                             class="btn btn-wide lg:w-auto bg-[#166534] hover:bg-[#166534]/60 text-white border-none">
-                                            Case Study
+                                            See More
                                         </button>
                                     </article>
                                 </div>
@@ -143,7 +142,7 @@
 
                                         <button
                                             class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
-                                            Case Study
+                                            See More
                                         </button>
                                     </article>
                                 </div>
