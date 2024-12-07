@@ -137,7 +137,8 @@ useHead({
                                 :duration="100"
                                 gradient-length="30%"
                                 :gradient="true"
-                                class="!h-72" direction="reverse">
+                                class="!h-80"
+                                direction="reverse">
                                 <TestimonialCard
                                     v-for="(data, index) in allTestimonials"
                                     :key="index"

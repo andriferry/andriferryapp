@@ -38,13 +38,13 @@ const widthCarousel = computed(() => {
             <article
                 id="latest-project"
                 data-aos="fade-down"
-                class="prose mb-3 prose-img:!m-0">
+                class="prose mr-5 mb-3 prose-img:!m-0">
                 <h1 class="text-info text-3xl mb-3 capitalize lg:text-4xl">
                     Hello, It's Me
                     <span class="icon-[twemoji--waving-hand]"></span>
                 </h1>
 
-                <div class="avatar">
+                <div class="avatar my-5">
                     <div
                         class="w-20 ring-gray-300 shadow-xl ring-offset-white ring ring-offset-1 rounded-full">
                         <img src="~assets/image/profile.jpg" />
