@@ -89,7 +89,7 @@ const scroller = computed(() => {
                                             v-for="(route, index) in routes"
                                             :key="index">
                                             <NuxtLink
-                                                active-class=" text-primary "
+                                                active-class="text-primary"
                                                 :to="route.link"
                                                 class="text-base">
                                                 {{ route.route }}
@@ -101,12 +101,12 @@ const scroller = computed(() => {
                         </div>
 
                         <div class="navbar-end">
-                            <button
+                            <a href="mailto:ferryandri35@gmail.com"
                                 class="btn btn-sm btn-primary hover:btn-info hover:bg-primary/80 hover:border-primary/80 hover:text-white text-white">
                                 Contact
                                 <span
                                     class="icon-[majesticons--open] h-4 w-4"></span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

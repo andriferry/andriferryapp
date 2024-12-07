@@ -14,28 +14,28 @@ useHead({
 
 const articles = ref([
     {
-        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        title: 'Introduce Nuxtjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
         url: '/blog',
     },
     {
-        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        title: 'Introduce Nuxtjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
         url: '/blog',
     },
     {
-        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        title: 'Introduce Nuxtjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',
         url: '/blog',
     },
     {
-        title: 'Introduce Nutxjs: Intuitive Vuejs framework',
+        title: 'Introduce Nuxtjs: Intuitive Vuejs framework',
         subtitle: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         img: NuxtThumbnail,
         date: 'Oct 26, 2024',

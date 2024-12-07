@@ -84,9 +84,11 @@ const widthCarousel = computed(() => {
                                 <span>View Our Works</span>
                             </NuxtLink>
 
-                            <button class="btn btn-active btn-link">
+                            <a
+                                href="mailto:ferryandri35@gmail.com"
+                                class="btn btn-active btn-link">
                                 Contact me
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </ClientOnly>

@@ -40,7 +40,7 @@ useHead({
                     </span>
                 </h1>
 
-                <p class="text-accent font-medium my-0">
+                <p class="text-accent lg:font-medium my-0">
                     The work we do, and the people we help.
                 </p>
             </article>
@@ -207,57 +207,6 @@ useHead({
                     </div>
                 </div>
 
-                <div class="col-span-1">
-                    <div class="card bg-[#e3f5f9] shadow-lg min-h-96">
-                        <div
-                            class="card-body items-center justify-center relative overflow-hidden lg:px-16">
-                            <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
-                                <div
-                                    data-aos="fade-right"
-                                    class="flex justify-center lg:justify-start items-center">
-                                    <article
-                                        class="prose text-center justify-center lg:text-start text-accent">
-                                        <h1
-                                            class="text-cyan-900/50 mb-0 text-4xl lg:text-5xl">
-                                            Cittamap
-                                        </h1>
-
-                                        <p class="mt-0 text-cyan-900/50">
-                                            Responsive Landing Pages
-                                        </p>
-
-                                        <button
-                                            class="btn btn-wide lg:w-auto bg-cyan-900/50 hover:bg-cyan-900/45 text-white border-none">
-                                            See More
-                                        </button>
-                                    </article>
-                                </div>
-
-                                <div class="flex items-center relative">
-                                    <div class="relative">
-                                        <img
-                                            data-aos="zoom-out"
-                                            class="rounded-lg lg:rounded-2xl z-10 relative shadow-2xl"
-                                            src="~assets/image/cittamap.png"
-                                            alt="" />
-                                    </div>
-
-                                    <div
-                                        data-aos="fade-right"
-                                        data-aos-duration="5000"
-                                        data-aos-easing="linear"
-                                        class="bg-cyan-900/25 z-0 -top-7 -left-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"></div>
-
-                                    <div
-                                        data-aos="fade-left"
-                                        data-aos-easing="linear"
-                                        class="bg-cyan-900/25 z-0 -bottom-[1.5rem] -right-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- infitech -->
                 <div class="col-span-1">
                     <div class="card bg-[#293462] shadow-lg min-h-96">
@@ -291,6 +240,57 @@ useHead({
                                             data-aos="zoom-out"
                                             class="rounded-lg lg:rounded-2xl z-10 relative shadow-2xl"
                                             src="~assets/image/infitech.png"
+                                            alt="" />
+                                    </div>
+
+                                    <div
+                                        data-aos="fade-right"
+                                        data-aos-duration="5000"
+                                        data-aos-easing="linear"
+                                        class="bg-cyan-900/25 z-0 -top-7 -left-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"></div>
+
+                                    <div
+                                        data-aos="fade-left"
+                                        data-aos-easing="linear"
+                                        class="bg-cyan-900/25 z-0 -bottom-[1.5rem] -right-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <div class="card bg-[#e3f5f9] shadow-lg min-h-96">
+                        <div
+                            class="card-body items-center justify-center relative overflow-hidden lg:px-16">
+                            <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
+                                <div
+                                    data-aos="fade-right"
+                                    class="flex justify-center lg:justify-start items-center">
+                                    <article
+                                        class="prose text-center justify-center lg:text-start text-accent">
+                                        <h1
+                                            class="text-cyan-900/50 mb-0 text-4xl lg:text-5xl">
+                                            Cittamap
+                                        </h1>
+
+                                        <p class="mt-0 text-cyan-900/50">
+                                            Responsive Landing Pages
+                                        </p>
+
+                                        <button
+                                            class="btn btn-wide lg:w-auto bg-cyan-900/50 hover:bg-cyan-900/45 text-white border-none">
+                                            See More
+                                        </button>
+                                    </article>
+                                </div>
+
+                                <div class="flex items-center relative">
+                                    <div class="relative">
+                                        <img
+                                            data-aos="zoom-out"
+                                            class="rounded-lg lg:rounded-2xl z-10 relative shadow-2xl"
+                                            src="~assets/image/cittamap.png"
                                             alt="" />
                                     </div>
 
