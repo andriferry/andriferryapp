@@ -97,18 +97,6 @@ useHead({
                                                     class="w-10 h-10 transition-all duration-300 ease-in-out" />
                                             </div>
                                         </div>
-
-                                        <!-- <div
-                                            class="flex flex-wrap gap-3 w-full lg:w-96 justify-start mt-3"
-                                            :class="data.stackClass">
-                                            <component
-                                                v-for="(
-                                                    stack, indexStack
-                                                ) in data.stack"
-                                                :key="indexStack"
-                                                :is="stack"
-                                                class="w-10 h-10 transition-all duration-300 ease-in-out" />
-                                        </div> -->
                                     </div>
                                     <hr
                                         v-if="
@@ -127,6 +115,13 @@ useHead({
                                     Testimonials
                                 </span>
                             </h2>
+
+
+                            <div class="">
+                                <div class="card  bg-base-100 w-96 shadow-sm drop-shadow-xl">
+                                    <div class="card-body"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
