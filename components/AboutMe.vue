@@ -127,40 +127,10 @@ const widthCarousel = computed(() => {
 
                 <div :class="widthCarousel" class="lg:w-full overflow-hidden">
                     <Flicking :options="options" :plugins="plugins" class="">
-                        <div
+                        <TestimonialCard
                             v-for="(data, index) in testimonials"
                             :key="index"
-                            data-aos="flip-left"
-                            data-aos-easing="ease-out-cubic"
-                            class="card bg-zinc-50 w-96 h-64 lg:mx-5">
-                            <div class="card-body">
-                                <article
-                                    class="prose prose-img:!m-0 prose-p:!m-0">
-                                    <p class="text-justify h-36 line-clamp-5">
-                                        {{ data.text }}
-                                    </p>
-
-                                    <div class="flex items-start gap-3 mt-4">
-                                        <div class="avatar">
-                                            <div
-                                                class="mask shadow-xl mask-squircle w-10">
-                                                <img :src="data.img" />
-                                            </div>
-                                        </div>
-
-                                        <div class="">
-                                            <p class="font-bold">
-                                                {{ data.name }}
-                                            </p>
-                                            <p
-                                                class="text-xs text-start font-light">
-                                                {{ data.company }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
+                            v-bind="data" />
                     </Flicking>
                 </div>
             </article>

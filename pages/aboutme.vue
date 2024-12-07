@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
-
-const breakpoints = useBreakpoints(breakpointsTailwind);
+import { Vue3Marquee } from 'vue3-marquee';
 
 definePageMeta({
     title: 'About Me',
 });
 const route = useRoute();
 
-const { Laravel, workHistory } = useAboutMe();
+const { workHistory, allTestimonials } = useAboutMe();
 
 useHead({
     titleTemplate: (titleChunk) => {
@@ -83,7 +81,12 @@ useHead({
 
                                         {{ data.text }}
 
-                                        <div :class="data.stackClass !== ''? 'lg:justify-end':'lg:justify-start'"
+                                        <div
+                                            :class="
+                                                data.stackClass !== ''
+                                                    ? 'lg:justify-end'
+                                                    : 'lg:justify-start'
+                                            "
                                             class="flex justify-start mt-3 items-center">
                                             <div
                                                 class="flex flex-wrap gap-3 w-full mt-0 lg:w-96 justify-start"
@@ -116,12 +119,31 @@ useHead({
                                 </span>
                             </h2>
 
+                            <Vue3Marquee
+                                :gradient-color="[255, 255, 255]"
+                                :duration="100"
+                                gradient-length="30%"
+                                :gradient="true"
+                                class="!h-80 mt-5">
+                                <TestimonialCard
+                                    v-for="(data, index) in allTestimonials"
+                                    :key="index"
+                                    v-bind="data"
+                                    class="!bg-base-100 !w-80 mx-5 shadow-sm drop-shadow-xl" />
+                            </Vue3Marquee>
 
-                            <div class="">
-                                <div class="card  bg-base-100 w-96 shadow-sm drop-shadow-xl">
-                                    <div class="card-body"></div>
-                                </div>
-                            </div>
+                            <Vue3Marquee
+                                :gradient-color="[255, 255, 255]"
+                                :duration="100"
+                                gradient-length="30%"
+                                :gradient="true"
+                                class="!h-72" direction="reverse">
+                                <TestimonialCard
+                                    v-for="(data, index) in allTestimonials"
+                                    :key="index"
+                                    v-bind="data"
+                                    class="!bg-base-100 !w-80 mx-5 shadow-sm drop-shadow-xl" />
+                            </Vue3Marquee>
                         </div>
                     </div>
                 </article>
