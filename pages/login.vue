@@ -1,14 +1,28 @@
 <script setup lang="ts">
+import { useSupabase } from '@/store/supabase';
+
 definePageMeta({
     middleware: 'unauth',
     layout: 'blank',
 });
 
-const email = ref('');
-const password = ref( '' );
+const { signinUser } = useSupabase();
 
-const loginIn = () => {
-    console.log('LoginIn');
+const router = useRouter();
+
+const form = ref({
+    email: '',
+    password: '',
+});
+
+const loginIn = async () => {
+    try {
+        const { error } = await signinUser(form.value);
+
+        if (error) throw error;
+
+        router.push('/dashboard');
+    } catch (error) {}
 };
 </script>
 
@@ -24,6 +38,7 @@ const loginIn = () => {
                         <label
                             class="input input-bordered flex items-center gap-2">
                             <input
+                                v-model="form.email"
                                 type="text"
                                 class="grow"
                                 placeholder="Email" />
@@ -32,9 +47,9 @@ const loginIn = () => {
                         <label
                             class="input input-bordered flex items-center gap-2">
                             <input
+                                v-model="form.password"
                                 type="password"
                                 class="grow"
-                                value="password"
                                 placeholder="Password" />
                         </label>
 
