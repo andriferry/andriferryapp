@@ -59,7 +59,7 @@ const widthCarousel = computed(() => {
                             class="prose text-sm md:text-xl w-3/4 text-accent font-medium">
                             <p>
                                 Highly skilled Full Stack developer with 5 years
-                                of experience in frontend development.
+                                of experience in software development.
 
                                 <span
                                     class="text-transparent absolute box-content w-fit bg-clip-text blur-xl bg-gradient-to-r from-primary to-secondary">

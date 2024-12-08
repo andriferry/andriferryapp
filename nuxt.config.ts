@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@vueuse/nuxt'],
+    modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@vueuse/nuxt', '@nuxtjs/supabase'],
     css: ['~/assets/css/tailwind.css', '@egjs/vue3-flicking/dist/flicking.css'],
     tailwindcss: {
         viewer: false,
@@ -39,4 +39,10 @@ export default defineNuxtConfig({
             'tailwindcss/nesting': {},
         },
     },
+    supabase: {
+        url: process.env.NUXT_SUPABASE_URL,
+        key: process.env.NUXT_SUPABASE_ANON_KEY,
+        serviceKey: process.env.NUXT_SUPABASE_SERVICE_KEY,
+        redirect: false,
+      },
 });
