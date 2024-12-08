@@ -17,10 +17,6 @@ const routes = ref([
         route: 'About Me',
         link: '/aboutme',
     },
-    {
-        route: 'Blogs',
-        link: '/blog',
-    },
 ]);
 
 const socialMedia = ref([

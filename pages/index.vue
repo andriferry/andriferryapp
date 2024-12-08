@@ -54,7 +54,7 @@ const articles = ref([
 
         <AboutMe />
 
-        <div class="overflow-hidden relative">
+        <!-- <div class="overflow-hidden relative">
             <Container class="grid gap-4 lg:grid-cols-4">
                 <div class="col-span-1 lg:col-span-4">
                     <article class="prose">
@@ -69,7 +69,7 @@ const articles = ref([
                     :key="index"
                     v-bind="data" />
             </Container>
-        </div>
+        </div> -->
     </div>
 </template>
 

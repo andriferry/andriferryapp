@@ -32,6 +32,7 @@ import CkEditor from '~/components/Icons/CkEditor.vue';
 import Clickup from '~/components/Icons/Clickup.vue';
 import Cloudflare from '~/components/Icons/Cloudflare.vue';
 import Directus from '~/components/Icons/Directus.vue';
+import Docker from '~/components/Icons/Docker.vue';
 import Firebase from '~/components/Icons/Firebase.vue';
 import Gitlab from '~/components/Icons/Gitlab.vue';
 import Golang from '~/components/Icons/Golang.vue';
@@ -44,6 +45,7 @@ import Quasar from '~/components/Icons/Quasar.vue';
 import Sentry from '~/components/Icons/Sentry.vue';
 import Shopify from '~/components/Icons/Shopify.vue';
 import XD from '~/components/Icons/XD.vue';
+
 
 export function useAboutMe() {
     const plugins = ref([
@@ -388,6 +390,7 @@ export function useAboutMe() {
                     Typescript,
                     Shopify,
                     Directus,
+                    Docker,
                     GoogleCloudApi,
                     Postgresql,
                     Mailgun,
