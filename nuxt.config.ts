@@ -33,7 +33,6 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'nuxt-aos',
         '@vueuse/nuxt',
-        '@nuxtjs/supabase',
         '@pinia/nuxt',
     ],
     css: ['~/assets/css/tailwind.css', '@egjs/vue3-flicking/dist/flicking.css'],
