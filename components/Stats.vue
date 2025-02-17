@@ -8,7 +8,7 @@ const stats = ref([
     class: 'plus',
   },
   {
-    value: 39,
+    value: 40,
     label: 'of Projects Completed',
     class: '',
   },

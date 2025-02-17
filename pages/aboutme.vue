@@ -1,18 +1,31 @@
 <script setup lang="ts">
 import { Vue3Marquee } from 'vue3-marquee'
 
-definePageMeta({ title: 'About Me' })
-const route = useRoute()
+const description = ref('I am a freelencer, Full Stack Developer , Based in Indonesia. Successful Remote work with client around the world more than 5 years of professional experience & with lots of Satisfied Customers. ')
 
 const {
   workHistory,
   allTestimonials,
 } = useAboutMe()
 
-useHead({
-  titleTemplate: (titleChunk) => {
-    return `${titleChunk} - ${route.meta.title}`
-  },
+useSeoMeta({
+  titleTemplate: '%s - %siteName',
+  title: 'About me',
+  // og title is not effected by titleTemplate, we can use template params here if we need
+  ogTitle: '%s',
+
+  twitterTitle: '%s',
+  // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
+
+  description: description.value,
+  ogDescription: description.value,
+  // explicit twitter title is only needed when we want to display something just for X
+  twitterDescription: description.value,
+})
+
+defineOgImageComponent('Default', {
+  title: 'Hey There, it\'s andri',
+  description: '5+ years of experience 40 of Projects Completed',
 })
 </script>
 

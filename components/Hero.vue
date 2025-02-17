@@ -48,7 +48,7 @@ const widthCarousel = computed(() => {
               <br />
               it's
 
-              <span class="text-transparent absolute box-content w-fit bg-clip-text blur-lg bg-gradient-to-r from-primary to-secondary">
+              <span class="text-transparent absolute box-content bg-clip-text blur-lg bg-gradient-to-r from-primary to-secondary">
                 {{ config.public.title }}.
               </span>
               <span class="text-transparent relative bg-clip-text bg-gradient-to-r from-primary to-secondary">

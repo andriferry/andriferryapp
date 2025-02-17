@@ -1,11 +1,24 @@
 <script setup lang="ts">
-definePageMeta({ title: 'Project' })
-const route = useRoute()
+const description = ref('Latest Creative Works Works & Featured Projects Project')
 
-useHead({
-  titleTemplate: (titleChunk) => {
-    return `${titleChunk} - ${route.meta.title}`
-  },
+useSeoMeta({
+  titleTemplate: '%s - %siteName',
+  title: 'Project',
+  // og title is not effected by titleTemplate, we can use template params here if we need
+  ogTitle: '%s',
+
+  twitterTitle: '%s',
+  // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
+
+  description: description.value,
+  ogDescription: description.value,
+  // explicit twitter title is only needed when we want to display something just for X
+  twitterDescription: description.value,
+})
+
+defineOgImageComponent('Default', {
+  title: 'Hey There, it\'s andri',
+  description: description.value,
 })
 </script>
 

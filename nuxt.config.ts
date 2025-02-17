@@ -35,25 +35,25 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/seo',
   ],
-  css: [
-    '~/assets/css/tailwind.css',
-    '@egjs/vue3-flicking/dist/flicking.css',
-  ],
-  tailwindcss: { viewer: false },
-  postcss: { plugins: { 'tailwindcss/nesting': {} } },
   robots: {
     // provide simple disallow rules for all robots `user-agent: *`
 
     allow: [
       '/',
       '/about',
-      '/form',
+      '/project',
     ],
   },
-  // supabase: {
-  //     url: process.env.NUXT_SUPABASE_URL,
-  //     key: process.env.NUXT_SUPABASE_ANON_KEY,
-  //     serviceKey: process.env.NUXT_SUPABASE_SERVICE_KEY,
-  //     redirect: false,
-  // },
+  // seo: { fallbackTitle: false },
+  css: [
+    '~/assets/css/tailwind.css',
+    '@egjs/vue3-flicking/dist/flicking.css',
+  ],
+  tailwindcss: { viewer: false },
+  postcss: { plugins: { 'tailwindcss/nesting': {} } },
+
+  site: {
+    url: process.env.NUXT_BASE_URL,
+    name: process.env.NUXT_TITLE_APP,
+  },
 })
