@@ -54,6 +54,67 @@ defineOgImageComponent('Default', {
 
       <div class="grid gap-10 mt-10">
         <div class="col-span-1">
+          <div class="card bg-slate-200 shadow-lg min-h-96">
+            <div class="card-body items-center justify-center relative overflow-hidden lg:px-16">
+              <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
+                <div
+                  data-aos="fade-right"
+                  class="flex justify-center lg:justify-start items-center"
+                >
+                  <article class="prose text-center justify-center lg:text-start text-accent">
+                    <h1 class="text-slate-500 mb-0 text-4xl lg:text-5xl">
+                      The Univuerse Kit
+                    </h1>
+
+                    <p class="mt-0 text-slate-500">
+                      Open Source Landing Page Boilerplate built with Nuxt v3 + Tailwind CSS, Eslint Config, SEO
+                    </p>
+
+                    <NuxtLink
+                      href="https://nuxttailuservuerse.vercel.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
+                  </article>
+                </div>
+
+                <div class="flex items-center relative">
+                  <img
+                    data-aos="zoom-out"
+                    class="rounded-2xl z-10 relative shadow-2xl"
+                    src="~assets/image/univuerseLight.png"
+                    alt=""
+                  />
+
+                  <img
+                    data-aos="zoom-out"
+                    class="rounded-lg lg:rounded-2xl z-20 w-48 -left-5 top-28 md:w-80 lg:-left-36 lg:top-40 absolute shadow-2xl"
+                    src="~assets/image/univuerseDark.png"
+                    alt=""
+                  />
+
+                  <div
+                    data-aos="fade-right"
+                    data-aos-duration="5000"
+                    data-aos-easing="linear"
+                    class="bg-cyan-900/25 z-0 -top-7 -left-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"
+                  ></div>
+
+                  <div
+                    data-aos="fade-left"
+                    data-aos-easing="linear"
+                    class="bg-cyan-900/25 z-0 -bottom-[1.5rem] -right-8 h-20 w-20 lg:h-40 lg:w-40 rounded-full absolute"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
           <div class="card bg-[#a87df8] shadow-lg min-h-96">
             <div class="card-body items-center justify-center relative overflow-hidden lg:px-16">
               <div class="grid gap-5 z-10 lg:grid-cols-2 w-full">
