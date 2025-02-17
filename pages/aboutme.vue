@@ -12,9 +12,9 @@ useSeoMeta({
   titleTemplate: '%s - %siteName',
   title: 'About me',
   // og title is not effected by titleTemplate, we can use template params here if we need
-  ogTitle: '%s',
+  ogTitle: '%s - %siteName',
 
-  twitterTitle: '%s',
+  twitterTitle: '%s - %siteName',
   // ogImage: 'http://localhost:3000/__og-image__/image/og.png',
 
   description: description.value,
