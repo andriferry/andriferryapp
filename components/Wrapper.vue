@@ -1,9 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-    <div class="min-h-screen overflow-hidden relative">
-        <slot />
-    </div>
+  <div class="min-h-screen overflow-hidden relative">
+    <slot></slot>
+  </div>
 </template>
-
-<style scoped></style>
