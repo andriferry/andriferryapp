@@ -3,7 +3,7 @@
  * @credits NuxtLabs <https://nuxtlabs.com/>
  * @see https://github.com/nuxt/nuxt.com/blob/main/components/OgImage/Docs.vue
  */
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<{ title?: string, description?: string, headline?: string }>(), {
   title: 'title',

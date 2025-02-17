@@ -33,6 +33,7 @@ import Clickup from '~/components/Icons/Clickup.vue'
 import Cloudflare from '~/components/Icons/Cloudflare.vue'
 import Directus from '~/components/Icons/Directus.vue'
 import Docker from '~/components/Icons/Docker.vue'
+import Eslint from '~/components/Icons/Eslint.vue'
 import Firebase from '~/components/Icons/Firebase.vue'
 import Gitlab from '~/components/Icons/Gitlab.vue'
 import Golang from '~/components/Icons/Golang.vue'
@@ -136,6 +137,10 @@ export function useAboutMe(): any {
     {
       text: 'Slack',
       component: Slack,
+    },
+    {
+      text: 'Eslint',
+      component: Eslint,
     },
   ]
 

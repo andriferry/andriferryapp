@@ -70,9 +70,14 @@ defineOgImageComponent('Default', {
                       Software Apps Project
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      href="https://urlmonitor-f2vl.vercel.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 
@@ -173,9 +178,14 @@ defineOgImageComponent('Default', {
                       Point of Sale Apps
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      href="https://poi-cozy.web.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 
@@ -232,9 +242,14 @@ defineOgImageComponent('Default', {
                       Responsive Landing Pages
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-[#000D6B]/45 hover:bg-[#000D6B]/25 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      href="https://infitect.vercel.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-[#000D6B]/45 hover:bg-[#000D6B]/25 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 
@@ -283,9 +298,14 @@ defineOgImageComponent('Default', {
                       Responsive Landing Pages
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-cyan-900/50 hover:bg-cyan-900/45 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      target="_blank"
+                      href="https://cittamapwebsite.vercel.app/"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-cyan-900/50 hover:bg-cyan-900/45 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 

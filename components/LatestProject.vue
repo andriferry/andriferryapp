@@ -32,9 +32,14 @@
                       Software Apps Project
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      href="https://urlmonitor-f2vl.vercel.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-[#532a9f] hover:bg-[#532a9f]/60 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 
@@ -135,9 +140,14 @@
                       Point of Sale Apps
                     </p>
 
-                    <button class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
-                      See More
-                    </button>
+                    <NuxtLink
+                      href="https://poi-cozy.web.app/"
+                      target="_blank"
+                    >
+                      <button class="btn btn-wide lg:w-auto bg-slate-500 hover:bg-slate-500/60 text-white border-none">
+                        See More
+                      </button>
+                    </NuxtLink>
                   </article>
                 </div>
 
